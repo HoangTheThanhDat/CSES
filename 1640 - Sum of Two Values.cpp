@@ -21,35 +21,37 @@ const bool TESTCASE = false;
 
 //  ------------------- d a t m a . _ c o d e r -------------------  //
 
-int n , x;
+int n , x , so;
 pair<int , int> a[N];
-set<pair<int , int> , greater<pair<int , int>>> s;
-set<pair<int , int> , greater<pair<int , int>>>::iterator y;
+set<pair<int , int>> s;
 
 void solve() {
     cin >> n >> x;
 
     for (int i = 1 ; i <= n ; i++) {
-        cin >> a[i].fi; a[i].se = i;
-        s.insert({a[i].fi , i});
+        cin >> so;
+
+        a[i] = {so , i};
+
+        s.insert(a[i]);
     }
 
     sort(a + 1 , a + n + 1);
 
     for (int i = 1 ; i <= n ; i++) {
-        if (a[i].fi > x) break;
+        int val = x - a[i].fi;
 
-        y = s.lower_bound({x - a[i].fi , a[i].se - 1});
+        set<pair<int , int>>::iterator y = s.lower_bound({val , a[i].se + 1});
 
-        if (y == s.end()) continue;
-
-        if (y -> fi == x - a[i].fi) {
-            cout << y -> se << " " << a[i].se << el;
-            return; 
+        if (y != s.end()) {
+            if (y -> fi == val) {
+                cout << min(a[i].se , (int)y -> se) << " " << max(a[i].se , (int)y -> se) << el;
+                return;
+            }
         }
     }
 
-    cout << "IMPOSSIBLE";
+    cout << "IMPOSSIBLE" << el;
 }
 
 datmacoder {
