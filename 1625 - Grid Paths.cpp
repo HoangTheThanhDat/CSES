@@ -13,101 +13,111 @@ using namespace std;
 template<class A,class B> inline void maximize(A& x, B y) {x = max(x, y);};
 template<class A,class B> inline void minimize(A& x, B y) {x = min(x, y);};
 
-const int N = 2 * 1e5 + 68;
+const int N = 2e5 + 68;
 const int mod = 1e9 + 7;
-const int inf = 2 * 1e9 + 1e8 + 6688;
-const ll oo = 3 * 1e18 + 1e17 + 666888;
+const int inf = 2e9 + 1e8 + 6688;
+const ll oo = 3e18 + 1e17 + 666888;
 const bool TESTCASE = false;
 
 //  ------------------- d a t m a . _ c o d e r -------------------  //
 
 string s;
-bool vis[7][7];
+bool visited[10][10];
 
 bool check(int i , int j) {
-    int c = 0;
+    if (visited[i][j] == true) return true;
 
-    if (vis[i][j]) return 0;
+    int cnt = 0;
 
-    if (i - 1 >= 0 && vis[i - 1][j] == 0) ++c;
-    if (i + 1 < 7 && vis[i + 1][j] == 0) ++c;
-    if (j - 1 >= 0 && vis[i][j - 1] == 0) ++c;
-    if (j + 1 < 7 && vis[i][j + 1] == 0) ++c;
+    if (i - 1 > 0 && !visited[i - 1][j]) ++cnt;
+    if (i + 1 < 8 && !visited[i + 1][j]) ++cnt;
+    if (j - 1 > 0 && !visited[i][j - 1]) ++cnt;
+    if (j + 1 < 8 && !visited[i][j + 1]) ++cnt;
 
-    if (i == 6 && j == 0 && c > 0) return 0;
+    if (i == 7 && j == 1 && cnt > 0) return true;
 
-    if (c < 2) 
-        return 1;
-    return 0;
+    if (cnt < 2) return false; else return true;
 }
 
-bool trap(int i , int j) {
-    int x = 0 , y = 0;
+bool Check(int i , int j) {
+    int col = 0 , row = 0;
 
-    if (i - 1 >= 0 && vis[i - 1][j] == 0) ++y;
-    if (i + 1 < 7 && vis[i + 1][j] == 0) ++y;
-    if (j - 1 >= 0 && vis[i][j - 1] == 0) ++x;
-    if (j + 1 < 7 && vis[i][j + 1] == 0) ++x;
+    if (i - 1 > 0 && !visited[i - 1][j]) ++row;
+    if (i + 1 < 8 && !visited[i + 1][j]) ++row;
 
-    if (x == 0 && y == 2) return true;
-    if (x == 2 && y == 0) return true;
+    if (j - 1 > 0 && !visited[i][j - 1]) ++col;
+    if (j + 1 < 8 && !visited[i][j + 1]) ++col;
 
-    return false;
+    if (row == 2 && col == 0) return false;
+    if (row == 0 && col == 2) return false;
+
+    return true;
+}
+
+bool CrossCheck(int i , int j) {
+    if (i - 1 > 0 && j - 1 > 0) 
+        if (!check(i - 1 , j - 1)) return false;
+
+    if (i - 1 > 0 && j + 1 < 8) 
+        if (!check(i - 1 , j + 1)) return false;
+
+    if (i + 1 < 8 && j - 1 > 0) 
+        if (!check(i + 1 , j - 1)) return false;
+    
+    if (i + 1 < 8 && j + 1 < 8) 
+        if (!check(i + 1 , j + 1)) return false;
+
+    return true;
 }
 
 int ans = 0;
 
-void rec(int mv , int i , int j) {
-    if (vis[i][j]) return;
+void rec(int idx , int i , int j) {
+    if (visited[i][j] == true) return;
 
-    vis[i][j] = 1;
+    if (i == 0 || i == 8 || j == 0 || j == 8) return;
 
-    int f = 0;
+    if (idx < 7 * 7 && i == 7 && j == 1) return;
 
-    if (i == 6 && j == 0) {
-        if (mv == 48) ++ans;
-        else {
-            vis[i][j] = 0;
-            ++f;
-        }
-    }
+    visited[i][j] = true;
 
-    if (i - 1 >= 0 && j - 1 >= 0) f += check(i - 1 , j - 1);
-    if (i - 1 >= 0 && j + 1 < 7) f += check(i - 1 , j + 1);
-    if (i + 1 < 7 && j + 1 < 7) f += check(i + 1 , j + 1);
-    if (i + 1 < 7 && j - 1 >= 0) f += check(i + 1 , j - 1);
+    if (!CrossCheck(i , j)) {
+        visited[i][j] = false; 
 
-    f += trap(i , j);
-
-    if (f != 0) {
-        vis[i][j] = 0;
         return;
     }
 
-    if (mv < 48) {
-        if (s[mv] == '?') {
-            if (i - 1 >= 0) rec(mv + 1 , i - 1 , j);
-            if (i + 1 < 7) rec(mv + 1 , i + 1 , j);
-            if (j - 1 >= 0) rec(mv + 1 , i , j - 1);
-            if (j + 1 < 7) rec(mv + 1 , i , j + 1);
+    if (!Check(i , j)) {
+        visited[i][j] = false;
+
+        return;
+    }
+
+    if (idx == 7 * 7) ++ans;
+    else {
+        if (s[idx] == '?') {
+            rec(idx + 1 , i + 1 , j);
+            rec(idx + 1 , i , j + 1);
+            rec(idx + 1 , i - 1 , j);
+            rec(idx + 1 , i , j - 1);
         }
         else {
-            if (s[mv] == 'L' && j - 1 >= 0) rec(mv + 1 , i , j - 1);
-            else if (s[mv] == 'R' && j + 1 < 7) rec(mv + 1 , i , j + 1);
-            else if (s[mv] == 'U' && i - 1 >= 0) rec(mv + 1 , i - 1 , j);
-            else if (s[mv] == 'D' && i + 1 < 7) rec(mv + 1 , i + 1 , j);
+            if (s[idx] == 'U') rec(idx + 1 , i - 1 , j);
+            else if (s[idx] == 'D') rec(idx + 1 , i + 1 , j);
+            else if (s[idx] == 'L') rec(idx + 1 , i , j - 1);
+            else if (s[idx] == 'R') rec(idx + 1 , i , j + 1);
         }
     }
 
-    vis[i][j] = 0;
+    visited[i][j] = false;
 }
 
 void solve() {
-    cin >> s;
+    cin >> s; s = " " + s;
 
-    ans = 0;
+    reset(visited , false);
 
-    rec(0 , 0 , 0);
+    rec(1 , 1 , 1);
 
     cout << ans;
 }
