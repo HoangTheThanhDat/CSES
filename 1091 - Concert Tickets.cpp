@@ -21,27 +21,24 @@ const bool TESTCASE = false;
 
 //  ------------------- d a t m a . _ c o d e r -------------------  //
 
-int n , m , x;
-set<pair<int , int>> s;
+int n , m , h , t;
+set<pair<int , int> , greater<pair<int , int>>> s;
 
 void solve() {
     cin >> n >> m;
 
-    for (int i = 1 ; i <= n ; i++) {
-        cin >> x;
-
-        s.insert({-x , i});
-    }
+    for (int i = 1 ; i <= n ; i++) cin >> h , s.insert({h , i});
 
     for (int i = 1 ; i <= m ; i++) {
-        cin >> x;
+        cin >> t;
 
-        set<pair<int , int>>::iterator y = s.lower_bound({-x , -1});
+        set<pair<int , int> , greater<pair<int , int>>>::iterator x = s.lower_bound({t , n + 1});
 
-        if (y == s.end()) cout << -1 << el;
+        if (x == s.end()) cout << -1 << el;
         else {
-            cout << -y -> fi << el;
-            s.erase(y);
+            cout << x -> fi << el;
+
+            s.erase(x);
         }
     }
 }
