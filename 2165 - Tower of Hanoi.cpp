@@ -13,32 +13,32 @@ using namespace std;
 template<class A,class B> inline void maximize(A& x, B y) {x = max(x, y);};
 template<class A,class B> inline void minimize(A& x, B y) {x = min(x, y);};
 
-const int N = 2 * 1e5 + 68;
+const int N = 2e5 + 68;
 const int mod = 1e9 + 7;
-const int inf = 2 * 1e9 + 1e8 + 6688;
-const ll oo = 3 * 1e18 + 1e17 + 666888;
+const int inf = 2e9 + 1e8 + 6688;
+const ll oo = 3e18 + 1e17 + 666888;
 const bool TESTCASE = false;
 
 //  ------------------- d a t m a . _ c o d e r -------------------  //
 
-int n;
-
-void backtraking(int a , int b , int c , int n) {
+void rec(int a , int b , int c , int n) {
     if (n == 0) return;
 
-    backtraking(a , c , b , n - 1);
+    rec(a , c , b , n - 1);
 
     cout << a << " " << c << el;
 
-    backtraking(b , a , c , n - 1);
+    rec(b , a , c , n - 1);
 }
+
+int n;
 
 void solve() {
     cin >> n;
-    
+
     cout << (1 << n) - 1 << el;
 
-    backtraking(1 , 2 , 3 ,  n);
+    rec(1 , 2 , 3 , n);
 }
 
 datmacoder {
