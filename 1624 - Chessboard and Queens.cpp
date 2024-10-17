@@ -13,49 +13,53 @@ using namespace std;
 template<class A,class B> inline void maximize(A& x, B y) {x = max(x, y);};
 template<class A,class B> inline void minimize(A& x, B y) {x = min(x, y);};
 
-const int N = 2 * 1e5 + 68;
+const int N = 2e5 + 68;
 const int mod = 1e9 + 7;
-const int inf = 2 * 1e9 + 1e8 + 6688;
-const ll oo = 3 * 1e18 + 1e17 + 666888;
+const int inf = 2e9 + 1e8 + 6688;
+const ll oo = 3e18 + 1e17 + 666888;
 const bool TESTCASE = false;
 
 //  ------------------- d a t m a . _ c o d e r -------------------  //
 
-char chess[8][8];
-int c = 0;
-int ld[15] , rd[15] , row[7];
+string chess[10];
+bool row[10 + 10] , dmain[10 + 10] , dsecon[10 + 10];
 
-void rec(int j) {
-    if (j == 8) {
-        ++c;
+ll ans = 0;
+
+void rec(int col) {
+    if (col == 9) {
+        ++ans;
         return;
     }
 
-    for (int i = 0 ; i < 8 ; i++) {
-        if (chess[i][j] == '.' && ld[i - j + 7] == 0 && rd[i + j] == 0 && row[i] == 0) {
-            ld[i - j + 7] = 1;
-            rd[i + j] = 1;
-            row[i] = 1;
+    for (int i = 1 ; i <= 8 ; i++) {
+        if (!row[i] && !dmain[i - col + 8] && !dsecon[i + col] && chess[col][i] == '.') {
+            
+            row[i] = dmain[i - col + 8] = dsecon[i + col] = true;
+            
+            rec(col + 1);
 
-            rec(j + 1);
+            row[i] = dmain[i - col + 8] = dsecon[i + col] = false;
 
-            ld[i - j + 7] = 0;
-            rd[i + j] = 0;
-            row[i] = 0;
         }
     }
 }
 
 void solve() {
-    for (int i = 0 ; i < 8 ; i++) {
-        for (int j = 0 ; j < 8 ; j++) {
-            cin >> chess[i][j];
-        }
+    for (int i = 1 ; i <= 8 ; i++) {
+            cin >> chess[i];
+            chess[i] = " " + chess[i];
     }
 
-    rec(0);
+    reset(row , false);
+    reset(dmain , false);
+    reset(dsecon , false);
 
-    cout << c;
+    ans = 0;
+
+    rec(1);
+
+    cout << ans;
 }
 
 datmacoder {
