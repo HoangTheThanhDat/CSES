@@ -27,11 +27,12 @@ void solve() {
     cin >> n;
 
     for (int i = 1 ; i <= n ; i++) cin >> a[i] >> b[i];
-    
+
     sort(a + 1 , a + n + 1);
     sort(b + 1 , b + n + 1);
 
-    int i = 1 , j = 1 , c = 0 , ans = 0;
+    int ans = 0 , c = 0 , i = 1 , j = 1;
+
     while (i <= n && j <= n) {
         if (a[i] < b[j]) ++c , ++i;
         else --c , ++j;
