@@ -24,24 +24,21 @@ const bool TESTCASE = false;
 int n;
 pair<int , int> a[N];
 
-bool cmp(pair<int , int> x , pair<int , int> y) {
-    return x.se < y.se;
+bool cmp(pair<int , int> a , pair<int , int> b) {
+    return a.se < b.se;
 }
 
 void solve() {
     cin >> n;
 
-    for (int i = 1 ; i <= n ; i++) {
-        cin >> a[i].fi >> a[i].se;
-    }
+    for (int i = 1 ; i <= n ; i++) cin >> a[i].fi >> a[i].se;
 
     sort(a + 1 , a + n + 1 , cmp);
 
-    int ans = 1 , x = a[1].se , i = 2;
+    int ans = 1 , cur = a[1].se;
 
-    while (i <= n) {
-        if (x <= a[i].fi) ++ans , x = a[i].se;
-        ++i;
+    for (int i = 2 ; i <= n ; i++) {
+        if (a[i].fi >= cur) ++ans , cur = a[i].se;
     }
 
     cout << ans;
