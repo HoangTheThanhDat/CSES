@@ -21,14 +21,16 @@ const bool TESTCASE = false;
 
 //  ------------------- d a t m a . _ c o d e r -------------------  //
 
-int n , m , a[N] , idx[N] , X , Y , x , y , ans;
+int n , m , idx[N] , a[N] , ans , x , y , X , Y;
 
 void solve() {
     cin >> n >> m;
 
-    for (int i = 1 ; i <= n ; i++) cin >> a[i] , idx[a[i]] = i;
+    idx[0] = 0; idx[n + 1] = n + 1;
 
-    ans = 1; idx[0] = 0; idx[n + 1] = n + 1; 
+    for (int i = 1 ; i <= n ; i++) cin >> a[i]; idx[a[i]] = i;
+
+    ans = 1;
 
     for (int i = 1 ; i <= n ; i++) {
         if (idx[i - 1] > idx[i]) ++ans;
@@ -37,10 +39,14 @@ void solve() {
     for (int i = 1 ; i <= m ; i++) {
         cin >> X >> Y;
 
-        x = a[X]; y = a[Y];
+        swap(a[X] , a[Y]);
+
+        x = a[X];
+        y = a[Y];
 
         if (idx[x - 1] <= idx[x] && idx[x - 1] > Y) ++ans;
         if (idx[x - 1] > idx[x] && idx[x - 1] <= Y) --ans;
+        
         if (idx[x] <= idx[x + 1] && Y > idx[x + 1]) ++ans;
         if (idx[x] > idx[x + 1] && Y <= idx[x + 1]) --ans;
 
@@ -48,12 +54,11 @@ void solve() {
 
         if (idx[y - 1] <= idx[y] && idx[y - 1] > X) ++ans;
         if (idx[y - 1] > idx[y] && idx[y - 1] <= X) --ans;
+
         if (idx[y] <= idx[y + 1] && X > idx[y + 1]) ++ans;
-        if (idx[y] < idx[y + 1] && X <= idx[y + 1]) --ans;
+        if (idx[y] > idx[y + 1] && X <= idx[y + 1]) --ans;
 
         idx[y] = X;
-
-        swap(a[X] , a[Y]);
 
         cout << ans << el;
     }
