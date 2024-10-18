@@ -3,7 +3,6 @@
 using namespace std;
 
 #define ll long long
-#define int ll
 #define fi first 
 #define se second 
 #define el '\n'
@@ -22,27 +21,27 @@ const bool TESTCASE = false;
 
 //  ------------------- d a t m a . _ c o d e r -------------------  //
 
-int n , a[N] , dp[N];
+int n , a[N];
 
 void solve() {
     cin >> n;
 
     for (int i = 1 ; i <= n ; i++) cin >> a[i];
 
+    ll sum = 1;
+
     sort(a + 1 , a + n + 1);
 
-    dp[0] = 1;
-
     for (int i = 1 ; i <= n ; i++) {
-        if (dp[i - 1] < a[i]) {
-            cout << dp[i - 1] << el;
+        if (a[i] > sum) {
+            cout << sum;
             return;
         }
-        
-        dp[i] = dp[i - 1] + a[i];
+
+        sum += a[i];
     }
 
-    cout << dp[n];
+    cout << sum;
 }
 
 datmacoder {
