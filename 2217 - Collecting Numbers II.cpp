@@ -28,7 +28,7 @@ void solve() {
 
     for (int i = 1 ; i <= n ; i++) cin >> a[i] , idx[a[i]] = i;
 
-    ans = 1; idx[0] = 0;
+    ans = 1; idx[0] = 0; idx[n + 1] = n + 1; 
 
     for (int i = 1 ; i <= n ; i++) {
         if (idx[i - 1] > idx[i]) ++ans;
