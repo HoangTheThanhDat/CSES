@@ -21,20 +21,21 @@ const bool TESTCASE = false;
 
 //  ------------------- d a t m a . _ c o d e r -------------------  //
 
-int n , so , idx[N] , cur;
+int n , so , idx[N];
 
 void solve() {
     cin >> n;
 
-    idx[n + 1] = 0;
-
-    for (int i = 1 ; i <= n ; i++) cin >> so , idx[so] = i;
-
-    int ans = 1; cur = 1;
-
     for (int i = 1 ; i <= n ; i++) {
-        if (cur > idx[i]) ++ans;
-        cur = idx[i];
+        cin >> so;
+
+        idx[so] = i;
+    }
+
+    int ans = 1;
+
+    for (int i = 2 ; i <= n ; i++) {
+        if (idx[i] < idx[i - 1]) ++ans;
     }
 
     cout << ans;
