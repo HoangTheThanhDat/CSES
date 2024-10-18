@@ -28,7 +28,7 @@ void solve() {
 
     idx[0] = 0; idx[n + 1] = n + 1;
 
-    for (int i = 1 ; i <= n ; i++) cin >> a[i]; idx[a[i]] = i;
+    for (int i = 1 ; i <= n ; i++) cin >> a[i], idx[a[i]] = i;
 
     ans = 1;
 
@@ -39,10 +39,10 @@ void solve() {
     for (int i = 1 ; i <= m ; i++) {
         cin >> X >> Y;
 
-        swap(a[X] , a[Y]);
-
         x = a[X];
         y = a[Y];
+
+        swap(a[X] , a[Y]);
 
         if (idx[x - 1] <= idx[x] && idx[x - 1] > Y) ++ans;
         if (idx[x - 1] > idx[x] && idx[x - 1] <= Y) --ans;
