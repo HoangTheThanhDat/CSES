@@ -21,23 +21,23 @@ const bool TESTCASE = false;
  
 //  ------------------- d a t m a . _ c o d e r -------------------  //
  
-int n , k;
+int n;
  
 void solve() {
-    cin >> n >> k; ++k;
+    cin >> n;
  
     int a = 1 , b = 0;
  
     while (n > 0) {
-        for (int i = k ; i <= n ; i += k) {
+        for (int i = 2 ; i <= n ; i += 2) {
             cout << a * i + b << " ";
         }
  
-        if (n ) cout << a + b << " " , b += a;
+        if (n & 1) cout << a + b << " " , b += a;
         else b -= a;
  
-        a *= k;
-        n /= k;
+        a <<= 1;
+        n >>= 1;
     }
 }
  
