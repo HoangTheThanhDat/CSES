@@ -21,42 +21,40 @@ const bool TESTCASE = false;
 
 //  ------------------- d a t m a . _ c o d e r -------------------  //
 
+int n , x , so;
+set<pair<int , int> , greater<pair<int , int>>> s;
+set<int> dis;
+unordered_map<int , int> dd;
+
 void solve() {
-    int x , n;
+    cin >> n >> x;
 
-    cin >> x >> n;
+    s.insert({1 , n});
+    dis.insert(n);
+    ++dd[n];
 
-    set<int> d = {x};
+    for (int i = 1 ; i <= x ; i++) {
+        cin >> so;
 
-    unordered_map<int , int> mp;
+        set<pair<int , int> , greater<pair<int , int>>>::iterator y = s.lower_bound({so , n + 1});
 
-    mp[x] = 1;
+        int fir = y -> fi , sec = y -> se;
 
-    set<int> up = {0 , x};
-    set<int> lo = {-x , 0};
+        --dd[sec];
 
-    for (int i = 0 ; i < n ; i++) {
-        int y; cin >> y;
+        if (dd[sec] == 0) dis.erase(sec);
 
-        int a = *up.upper_bound(y);
-        int b = -*lo.lower_bound(-y);
+        s.erase(y);
 
-        up.insert(y);
-        lo.insert(-y);
+        s.insert({fir , so - fir + 1});
+        dis.insert(so - fir + 1);
+        ++dd[so - fir + 1];
 
-        --mp[a - b];
+        s.insert({so + 1 , sec - so + fir - 1});
+        dis.insert(sec - so + fir - 1);
+        ++dd[sec - so + fir - 1];
 
-        if (mp[a - b] == 0) {
-            d.erase(a - b);
-        }
-
-        d.insert(a - y);
-        d.insert(y - b);
-
-        ++mp[a - y];
-        ++mp[y - b];
-
-        cout << *d.rbegin() << " ";
+        cout << *dis.rbegin() << " ";
     }
 }
 
