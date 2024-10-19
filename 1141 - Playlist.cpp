@@ -21,40 +21,36 @@ const bool TESTCASE = false;
 
 //  ------------------- d a t m a . _ c o d e r -------------------  //
 
-int n , x;
-pair<int , int> a[N];
+int n , a[N] , cur , ans;
 set<pair<int , int>> s;
-set<pair<int , int>>::iterator y;
-int ans = 0 , cur = 0;
 
 void solve() {
     cin >> n;
 
-    for (int i = 0 ; i < n ; i++) {
-        cin >> x;
+    cur = 1; ans = 0;
 
-        a[i] = {x , i};
-    }
+    for (int i = 1 ; i <= n ; i++) {
+        cin >> a[i];
 
-    for (int i = 0 ; i < n ; i++) {
-        x = a[i].fi;
+        set<pair<int , int>>::iterator x = s.lower_bound({a[i] , -1});
 
-        y = s.lower_bound({x , -1});
+        if (x != s.end() && x -> fi == a[i]) {
 
-        if (y == s.end() || y -> fi > x) s.insert(a[i]);
-        else {
-            maximize(ans , (int)s.size());
-
-            for (int i = cur ; i <= y -> se ; i++) {
-                s.erase(a[i]);
+            for (int j = cur ; j <= x -> se ; j++) {
+                s.erase({a[j] , j});
             }
 
-            cur = y -> se + 1;
-            s.insert(a[i]);
+            cur = x -> se + 1;
+
+            s.insert({a[i] , i});
+
+            maximize(ans , (int) s.size());
+        }
+        else {
+            s.insert({a[i] , i});
+            maximize(ans , (int) s.size());
         }
     }
-
-    maximize(ans , (int)s.size());
 
     cout << ans;
 }
