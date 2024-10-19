@@ -21,25 +21,23 @@ const bool TESTCASE = false;
 
 //  ------------------- d a t m a . _ c o d e r -------------------  //
 
-int n;
+int n , so;
+vector<int> vec;
+vector<int>::iterator x;
 
 void solve() {
     cin >> n;
 
-    vector<int> v;
+    for (int i = 1 ; i <= n ; i++) {
+        cin >> so;
 
-    for (int i = 0 ; i < n ; i++) {
-        int x; cin >> x;
+        x = upper_bound(vec.begin() , vec.end() , so);
 
-        vector<int>::iterator y = upper_bound(v.begin() , v.end() , x);
-
-        if (y == v.end()) v.push_back(x);
-        else {
-            v[y - v.begin()] = x;
-        }
+        if (x == vec.end()) vec.push_back(so);
+        else vec[x - vec.begin()] = so;
     }
 
-    cout << v.size();
+    cout << vec.size() << el;
 }
 
 datmacoder {
