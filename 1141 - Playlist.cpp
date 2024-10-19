@@ -41,15 +41,11 @@ void solve() {
             }
 
             cur = x -> se + 1;
-
-            s.insert({a[i] , i});
-
-            maximize(ans , (int) s.size());
         }
-        else {
-            s.insert({a[i] , i});
-            maximize(ans , (int) s.size());
-        }
+
+        s.insert({a[i] , i});
+
+        maximize(ans , (int)s.size());
     }
 
     cout << ans;
