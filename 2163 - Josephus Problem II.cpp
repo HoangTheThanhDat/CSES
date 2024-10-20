@@ -22,7 +22,7 @@ const bool TESTCASE = false;
 //  ------------------- d a t m a . _ c o d e r -------------------  //
 
 struct Data {
-    int l , r , sz;
+        int l , r , sz;
 };
 
 int n , K , c = 0 , Sqrt;
@@ -31,114 +31,112 @@ bool visited[N];
 
 
 int getBlock(int i) {
-    return (i - 1) / Sqrt + 1;
+        return (i - 1) / Sqrt + 1;
 }
 
 void solve() {
-    cin >> n >> K;
+        cin >> n >> K;
 
-    Sqrt = sqrt(n);
+        Sqrt = sqrt(n);
 
-    int i = 1;
+        int i = 1;
 
-    while (i + Sqrt <= n) {
-            ++c;
+        while (i + Sqrt <= n) {
+                ++c;
 
-            Block[c].l = i;
-            Block[c].r = i + Sqrt - 1;
-            Block[c].sz = Sqrt;
+                Block[c].l = i;
+                Block[c].r = i + Sqrt - 1;
+                Block[c].sz = Sqrt;
 
-            i += Sqrt;
-    }
+                i += Sqrt;
+        }
 
-    if (Block[c].r < n) {
-            ++c;
+        if (Block[c].r < n) {
+                ++c;
 
-            Block[c].l = Block[c - 1].r + 1;
-            Block[c].r = n;
-            Block[c].sz = n - Block[c - 1].r;
-    }
+                Block[c].l = Block[c - 1].r + 1;
+                Block[c].r = n;
+                Block[c].sz = n - Block[c - 1].r;
+        }
 
-    reset(visited , false);
+        reset(visited , false);
 
-    int j = 0;
+        int j = 0;
 
-    i = K % n + 1;
+        i = K % n + 1;
 
-    if (i > n) i = n;
+        if (i > n) i = n;
 
-    while (j < n) {
-            int cnt = 0;
+        while (j < n) {
+                int cnt = 0;
 
-            ++j;    
+                ++j;    
 
-            cout << i << " ";
+                cout << i << " ";
 
-            if (j == n) continue;
+                if (j == n) continue;
 
-            int k = K % (n - j);
+                int k = K % (n - j);
 
-            visited[i] = true;
+                visited[i] = true;
 
-            int get = getBlock(i);
+                int get = getBlock(i);
 
-            --Block[get].sz;
+                --Block[get].sz;
 
-            bool stop = false;
+                bool stop = false;
 
-            for (int x = i + 1 ; x <= Block[get].r ; x++) {
-                    if (!visited[x]) {
-                        ++cnt;
+                for (int x = i + 1 ; x <= Block[get].r ; x++) 
+                        if (!visited[x]) {
+                                ++cnt;
 
-                        if (cnt == k + 1) {
-                            i = x;
-                            stop = true;
-                            break;
+                                if (cnt == k + 1) {
+                                        i = x;
+                                        stop = true;
+                                        break;
+                                }
                         }
-                    }
-                }
 
-            if (stop) continue;
+                if (stop) continue;
 
-            int x = get + 1; if (x > c) x = 1;
+                int x = get + 1; if (x > c) x = 1;
 
-            while (cnt + Block[x].sz < k + 1) {
-                    cnt += Block[x].sz;
+                while (cnt + Block[x].sz < k + 1) {
+                        cnt += Block[x].sz;
             
-                    ++x; if (x > c) x = 1;
+                        ++x; if (x > c) x = 1;
                 }
 
-            for (int y = Block[x].l ; y <= Block[x].r ; y++) {
-                    if (!visited[y]) {
-                            ++cnt;
+                for (int y = Block[x].l ; y <= Block[x].r ; y++) 
+                        if (!visited[y]) {
+                                ++cnt;
 
-                            if (cnt == k + 1) {
-                                    i = y;
-                                    break;
-                            }
-                    }
-            }
-    }
+                                if (cnt == k + 1) {
+                                        i = y;
+                                        break;
+                                }
+                        }
+        }
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-        solve();
-    }
+        while (testcase--) {
+            solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
-  d a t m a . _ c o d e r
-  H O A N G  T H E  T H A N H  D A T
+        d a t m a . _ c o d e r
+        H O A N G  T H E  T H A N H  D A T
 */
