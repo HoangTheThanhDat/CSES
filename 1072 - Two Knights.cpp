@@ -24,32 +24,31 @@ const bool TESTCASE = false;
 ll n;
 
 ll sqr(ll i) {
-    return i * i;
+        return i * i;
 }
 
 void solve() {
-    cin >> n;
+        cin >> n;
 
-    for (ll i = 1 ; i <= n ; i++) {
-        cout << (sqr(i) * (sqr(i) - 1) / 2 - 4 * (i - 1) * (i - 2)) << el;
-    }
+        for (ll i = 1 ; i <= n ; i++) 
+                cout << (sqr(i) * (sqr(i) - 1) / 2 - 4 * (i - 1) * (i - 2)) << el;
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-        solve();
-    }
+        while (testcase--) {
+                solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
