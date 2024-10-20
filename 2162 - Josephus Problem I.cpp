@@ -59,7 +59,7 @@ void solve() {
                 while (visited[i]) {
                         ++i;
                         if (i == n + 1) i = 1;
-            }
+                }
         }
 }
 
