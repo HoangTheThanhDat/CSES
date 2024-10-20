@@ -44,7 +44,7 @@ void solve() {
                         while (i <= n) {
                                 cout << i << " ";
  
-                                 i += 2;
+                                i += 2;
                         }
                 } 
 }
