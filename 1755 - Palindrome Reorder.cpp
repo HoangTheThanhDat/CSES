@@ -25,56 +25,56 @@ string st , ans = "" , bw = "";
 int s[300];
 
 void solve() {
-    cin >> st;
+        cin >> st;
 
-    reset(s , 0);
+        reset(s , 0);
 
-    for (int i = 0 ; i < st.size() ; i++) {
-        ++s[st[i]];
+        for (int i = 0 ; i < st.size() ; i++) {
+                ++s[st[i]];
 
-        if ((s[st[i]] & 1) == 0) ans += char(st[i]);
-    }
-
-    int d = 0;
-
-    for (int i = 1 ; i < 300 ; i++) {
-        if (s[i] & 1) {
-            ++d;
-
-            if (d == 2) {
-                cout << "NO SOLUTION" << el;
-                return;
-            }
-
-            bw += char(i);
+                if ((s[st[i]] & 1) == 0) 
+                        ans += char(st[i]);
         }
-    }
 
-    cout << ans << bw;
+        int d = 0;
 
-    reverse(ans.begin() , ans.end());
+        for (int i = 1 ; i < 300 ; i++) 
+                if (s[i] & 1) {
+                        ++d;
 
-    cout << ans;
+                        if (d == 2) {
+                                cout << "NO SOLUTION" << el;
+                                return;
+                        }
+
+                        bw += char(i);
+                }
+
+        cout << ans << bw;
+
+        reverse(ans.begin() , ans.end());
+
+        cout << ans;
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-        solve();
-    }
+        while (testcase--) {
+                solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
-  d a t m a . _ c o d e r
-  H O A N G  T H E  T H A N H  D A T
+        d a t m a . _ c o d e r
+        H O A N G  T H E  T H A N H  D A T
 */
