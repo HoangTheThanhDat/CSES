@@ -26,52 +26,51 @@ pair<int , int> a[N];
 set<pair<int , int>> s;
 
 void solve() {
-    cin >> n >> x;
+        cin >> n >> x;
 
-    for (int i = 1 ; i <= n ; i++) {
-        cin >> so;
+        for (int i = 1 ; i <= n ; i++) {
+                cin >> so;
 
-        a[i] = {so , i};
+                a[i] = {so , i};
 
-        s.insert(a[i]);
-    }
-
-    sort(a + 1 , a + n + 1);
-
-    for (int i = 1 ; i <= n ; i++) {
-        int val = x - a[i].fi;
-
-        set<pair<int , int>>::iterator y = s.lower_bound({val , a[i].se + 1});
-
-        if (y != s.end()) {
-            if (y -> fi == val) {
-                cout << min(a[i].se , (int)y -> se) << " " << max(a[i].se , (int)y -> se) << el;
-                return;
-            }
+                s.insert(a[i]);
         }
-    }
 
-    cout << "IMPOSSIBLE" << el;
+        sort(a + 1 , a + n + 1);
+
+        for (int i = 1 ; i <= n ; i++) {
+                int val = x - a[i].fi;
+
+                set<pair<int , int>>::iterator y = s.lower_bound({val , a[i].se + 1});
+
+                if (y != s.end()) 
+                        if (y -> fi == val) {
+                                cout << min(a[i].se , (int)y -> se) << " " << max(a[i].se , (int)y -> se) << el;
+                                return;
+                        }
+        }
+
+        cout << "IMPOSSIBLE" << el;
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-        solve();
-    }
+        while (testcase--) {
+                solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
-  d a t m a . _ c o d e r
-  H O A N G  T H E  T H A N H  D A T
+        d a t m a . _ c o d e r
+        H O A N G  T H E  T H A N H  D A T
 */
