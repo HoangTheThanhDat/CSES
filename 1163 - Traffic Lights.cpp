@@ -27,55 +27,55 @@ set<int> dis;
 unordered_map<int , int> dd;
 
 void solve() {
-    cin >> n >> x;
+        cin >> n >> x;
 
-    s.insert({1 , n});
-    dis.insert(n);
-    ++dd[n];
+        s.insert({1 , n});
+        dis.insert(n);
+        ++dd[n];
 
-    for (int i = 1 ; i <= x ; i++) {
-        cin >> so;
+        for (int i = 1 ; i <= x ; i++) {
+                cin >> so;
 
-        set<pair<int , int> , greater<pair<int , int>>>::iterator y = s.lower_bound({so , n + 1});
+                set<pair<int , int> , greater<pair<int , int>>>::iterator y = s.lower_bound({so , n + 1});
 
-        int fir = y -> fi , sec = y -> se;
+                int fir = y -> fi , sec = y -> se;
 
-        --dd[sec];
+                --dd[sec];
 
-        if (dd[sec] == 0) dis.erase(sec);
+                if (dd[sec] == 0) dis.erase(sec);
 
-        s.erase(y);
+                s.erase(y);
 
-        s.insert({fir , so - fir + 1});
-        dis.insert(so - fir + 1);
-        ++dd[so - fir + 1];
+                s.insert({fir , so - fir + 1});
+                dis.insert(so - fir + 1);
+                ++dd[so - fir + 1];
 
-        s.insert({so + 1 , sec - so + fir - 1});
-        dis.insert(sec - so + fir - 1);
-        ++dd[sec - so + fir - 1];
+                s.insert({so + 1 , sec - so + fir - 1});
+                dis.insert(sec - so + fir - 1);
+                ++dd[sec - so + fir - 1];
 
-        cout << *dis.rbegin() << " ";
-    }
+                cout << *dis.rbegin() << " ";
+        }
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-        solve();
-    }
+        while (testcase--) {
+            solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
-  d a t m a . _ c o d e r
-  H O A N G  T H E  T H A N H  D A T
+        d a t m a . _ c o d e r
+        H O A N G  T H E  T H A N H  D A T
 */
