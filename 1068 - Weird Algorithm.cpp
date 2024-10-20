@@ -34,7 +34,6 @@ void solve() {
                 else
                         n /= 2;
 
-        
                 cout << n << " ";
     }
 }
@@ -50,7 +49,7 @@ datmacoder {
     else cin >> testcase;
 
     while (testcase--) {
-        solve();
+            solve();
     }
 
     return 0;
