@@ -25,59 +25,61 @@ const bool TESTCASE = false;
 int n;
 
 void solve() {
-    cin >> n;
+            cin >> n;
 
-    if (((n + 1) * n / 2) & 1) {
-        cout << "NO";
-    }
-    else {
-        set<int> a;
-        set<int> b;
+            if (((n + 1) * n / 2) & 1)
+                    cout << "NO";
+            else {
+                    set<int> a;
+                    set<int> b;
 
-        int i , sta;
+                    int i , sta;
 
-        if (n & 1) {
-            a.insert(1); a.insert(2);
-            b.insert(3);
+                    if (n & 1) {
+                            a.insert(1); a.insert(2);
+                            b.insert(3);
 
-            i = 4; sta = 2;
-        }
-        else {
-            i = 1; sta = 2;
-        }
+                            i = 4; sta = 2;
+                    }
+                    else
+                            i = 1 , sta = 2;
 
-        while (i <= n) {
-            if (sta == 1 || sta == 2) a.insert(i); else b.insert(i);
+                    while (i <= n) {
+                            if (sta == 1 || sta == 2) 
+                                    a.insert(i); 
+                            else 
+                                    b.insert(i);
 
-            ++sta; if (sta == 5) sta = 1;
-            ++i;
-        }
+                            ++sta; if (sta == 5) sta = 1;
+                            ++i;
+                    }
 
-        cout << "YES" << el;
+                    cout << "YES" << el;
 
-        cout << a.size() << el; for (int i : a) cout << i << " "; cout << el;
-        cout << b.size() << el; for (int i : b) cout << i << " ";
-    }
+                    cout << a.size() << el; for (int i : a) cout << i << " "; cout << el;
+                    cout << b.size() << el; for (int i : b) cout << i << " ";
+
+            }
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-        solve();
-    }
+        while (testcase--) {
+            solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
-  d a t m a . _ c o d e r
-  H O A N G  T H E  T H A N H  D A T
+        d a t m a . _ c o d e r
+        H O A N G  T H E  T H A N H  D A T
 */
