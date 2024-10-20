@@ -25,44 +25,45 @@ int n;
 vector<string> vec;
 
 void solve() {
-    cin >> n;
+        cin >> n;
 
-    vec.push_back("");
+        vec.push_back("");
 
-    for (int i = 1 ; i <= n ; i++) {
-        int sz = vec.size();
+        for (int i = 1 ; i <= n ; i++) {
+                int sz = vec.size();
 
-        for (int j = sz - 1 ; j >= 0 ; j--) vec.push_back(vec[j]);
+                for (int j = sz - 1 ; j >= 0 ; j--) vec.push_back(vec[j]);
 
-        sz *= 2;
+                sz *= 2;
 
-        for (int j = 0 ; j < sz ; j++) {
-            if (j < sz / 2) vec[j] = "0" + vec[j];
-            else vec[j] = "1" + vec[j];
+                for (int j = 0 ; j < sz ; j++) 
+                        if (j < sz / 2) 
+                                vec[j] = "0" + vec[j];
+                        else 
+                                vec[j] = "1" + vec[j];
         }
-    }
 
-    for (int i = 0 ; i < vec.size() ; i++) cout << vec[i] << el;
+        for (int i = 0 ; i < vec.size() ; i++) cout << vec[i] << el;
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-        solve();
-    }
+        while (testcase--) {
+                solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
-  d a t m a . _ c o d e r
-  H O A N G  T H E  T H A N H  D A T
+        d a t m a . _ c o d e r
+        H O A N G  T H E  T H A N H  D A T
 */
