@@ -25,121 +25,123 @@ string s;
 bool visited[10][10];
 
 bool check(int i , int j) {
-    if (visited[i][j] == true) return true;
+        if (visited[i][j] == true) return true;
 
-    int cnt = 0;
+        int cnt = 0;
 
-    if (i - 1 > 0 && !visited[i - 1][j]) ++cnt;
-    if (i + 1 < 8 && !visited[i + 1][j]) ++cnt;
-    if (j - 1 > 0 && !visited[i][j - 1]) ++cnt;
-    if (j + 1 < 8 && !visited[i][j + 1]) ++cnt;
+        if (i - 1 > 0 && !visited[i - 1][j]) ++cnt;
+        if (i + 1 < 8 && !visited[i + 1][j]) ++cnt;
+        if (j - 1 > 0 && !visited[i][j - 1]) ++cnt;
+        if (j + 1 < 8 && !visited[i][j + 1]) ++cnt;
 
-    if (i == 7 && j == 1 && cnt > 0) return true;
+        if (i == 7 && j == 1 && cnt > 0)
+                return true;
 
-    if (cnt < 2) return false; else return true;
+        if (cnt < 2) 
+                return false; 
+
+        return true;
 }
 
 bool Check(int i , int j) {
-    int col = 0 , row = 0;
+        int col = 0 , row = 0;
 
-    if (i - 1 > 0 && !visited[i - 1][j]) ++row;
-    if (i + 1 < 8 && !visited[i + 1][j]) ++row;
+        if (i - 1 > 0 && !visited[i - 1][j]) ++row;
+        if (i + 1 < 8 && !visited[i + 1][j]) ++row;
 
-    if (j - 1 > 0 && !visited[i][j - 1]) ++col;
-    if (j + 1 < 8 && !visited[i][j + 1]) ++col;
+        if (j - 1 > 0 && !visited[i][j - 1]) ++col;
+        if (j + 1 < 8 && !visited[i][j + 1]) ++col;
 
-    if (row == 2 && col == 0) return false;
-    if (row == 0 && col == 2) return false;
+        if (row == 2 && col == 0) return false;
+        if (row == 0 && col == 2) return false;
 
-    return true;
+        return true;
 }
 
 bool CrossCheck(int i , int j) {
-    if (i - 1 > 0 && j - 1 > 0) 
-        if (!check(i - 1 , j - 1)) return false;
+        if (i - 1 > 0 && j - 1 > 0) 
+                if (!check(i - 1 , j - 1)) return false;
 
-    if (i - 1 > 0 && j + 1 < 8) 
-        if (!check(i - 1 , j + 1)) return false;
+        if (i - 1 > 0 && j + 1 < 8) 
+                if (!check(i - 1 , j + 1)) return false;
 
-    if (i + 1 < 8 && j - 1 > 0) 
-        if (!check(i + 1 , j - 1)) return false;
+        if (i + 1 < 8 && j - 1 > 0) 
+                if (!check(i + 1 , j - 1)) return false;
     
-    if (i + 1 < 8 && j + 1 < 8) 
-        if (!check(i + 1 , j + 1)) return false;
+        if (i + 1 < 8 && j + 1 < 8) 
+                if (!check(i + 1 , j + 1)) return false;
 
-    return true;
+        return true;
 }
 
 int ans = 0;
 
 void rec(int idx , int i , int j) {
-    if (visited[i][j] == true) return;
+        if (visited[i][j] == true) return;
 
-    if (i == 0 || i == 8 || j == 0 || j == 8) return;
+        if (i == 0 || i == 8 || j == 0 || j == 8) return;
 
-    if (idx < 7 * 7 && i == 7 && j == 1) return;
+        if (idx < 7 * 7 && i == 7 && j == 1) return;
 
-    visited[i][j] = true;
+        visited[i][j] = true;
 
-    if (!CrossCheck(i , j)) {
-        visited[i][j] = false; 
+        if (!CrossCheck(i , j)) {
+                visited[i][j] = false; 
 
-        return;
-    }
+                return;
+        }
 
-    if (!Check(i , j)) {
+        if (!Check(i , j)) {
+                visited[i][j] = false;
+
+                return;
+        }
+
+        if (idx == 7 * 7) ++ans;
+        else 
+                if (s[idx] == '?')
+                        rec(idx + 1 , i + 1 , j) ,
+                        rec(idx + 1 , i , j + 1) ,
+                        rec(idx + 1 , i - 1 , j) ,
+                        rec(idx + 1 , i , j - 1);
+        
+                else 
+                        if (s[idx] == 'U') rec(idx + 1 , i - 1 , j);
+                        else if (s[idx] == 'D') rec(idx + 1 , i + 1 , j);
+                        else if (s[idx] == 'L') rec(idx + 1 , i , j - 1);
+                        else if (s[idx] == 'R') rec(idx + 1 , i , j + 1);
+
         visited[i][j] = false;
-
-        return;
-    }
-
-    if (idx == 7 * 7) ++ans;
-    else {
-        if (s[idx] == '?') {
-            rec(idx + 1 , i + 1 , j);
-            rec(idx + 1 , i , j + 1);
-            rec(idx + 1 , i - 1 , j);
-            rec(idx + 1 , i , j - 1);
-        }
-        else {
-            if (s[idx] == 'U') rec(idx + 1 , i - 1 , j);
-            else if (s[idx] == 'D') rec(idx + 1 , i + 1 , j);
-            else if (s[idx] == 'L') rec(idx + 1 , i , j - 1);
-            else if (s[idx] == 'R') rec(idx + 1 , i , j + 1);
-        }
-    }
-
-    visited[i][j] = false;
 }
 
 void solve() {
-    cin >> s; s = " " + s;
+        cin >> s; s = " " + s;
 
-    reset(visited , false);
+        reset(visited , false);
 
-    rec(1 , 1 , 1);
+        rec(1 , 1 , 1);
 
-    cout << ans;
+        cout << ans;
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-        solve();
-    }
+        while (testcase--) {
+                solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
-  d a t m a . _ c o d e r
-  H O A N G  T H E  T H A N H  D A T
+        d a t m a . _ c o d e r
+        H O A N G  T H E  T H A N H  D A T
 */
