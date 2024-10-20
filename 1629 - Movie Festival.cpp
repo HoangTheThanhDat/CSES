@@ -25,43 +25,42 @@ int n;
 pair<int , int> a[N];
 
 bool cmp(pair<int , int> a , pair<int , int> b) {
-    return a.se < b.se;
+        return a.se < b.se;
 }
 
 void solve() {
-    cin >> n;
+        cin >> n;
 
-    for (int i = 1 ; i <= n ; i++) cin >> a[i].fi >> a[i].se;
+        for (int i = 1 ; i <= n ; i++) cin >> a[i].fi >> a[i].se;
 
-    sort(a + 1 , a + n + 1 , cmp);
+        sort(a + 1 , a + n + 1 , cmp);
 
-    int ans = 1 , cur = a[1].se;
+        int ans = 1 , cur = a[1].se;
 
-    for (int i = 2 ; i <= n ; i++) {
-        if (a[i].fi >= cur) ++ans , cur = a[i].se;
-    }
+        for (int i = 2 ; i <= n ; i++) 
+                if (a[i].fi >= cur) ++ans , cur = a[i].se;
 
-    cout << ans;
+        cout << ans;
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-        solve();
-    }
+        while (testcase--) {
+                solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
-  d a t m a . _ c o d e r
-  H O A N G  T H E  T H A N H  D A T
+        d a t m a . _ c o d e r
+        H O A N G  T H E  T H A N H  D A T
 */
