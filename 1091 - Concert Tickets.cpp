@@ -25,42 +25,43 @@ int n , m , h , t;
 set<pair<int , int> , greater<pair<int , int>>> s;
 
 void solve() {
-    cin >> n >> m;
+        cin >> n >> m;
 
-    for (int i = 1 ; i <= n ; i++) cin >> h , s.insert({h , i});
+        for (int i = 1 ; i <= n ; i++) cin >> h , s.insert({h , i});
 
-    for (int i = 1 ; i <= m ; i++) {
-        cin >> t;
+        for (int i = 1 ; i <= m ; i++) {
+                cin >> t;
 
-        set<pair<int , int> , greater<pair<int , int>>>::iterator x = s.lower_bound({t , n + 1});
+                set<pair<int , int> , greater<pair<int , int>>>::iterator x = s.lower_bound({t , n + 1});
 
-        if (x == s.end()) cout << -1 << el;
-        else {
-            cout << x -> fi << el;
+                if (x == s.end()) 
+                        cout << -1 << el;
+                else {
+                        cout << x -> fi << el;
 
-            s.erase(x);
+                        s.erase(x);
+                }
         }
-    }
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-        solve();
-    }
+        while (testcase--) {
+                solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
-  d a t m a . _ c o d e r
-  H O A N G  T H E  T H A N H  D A T
+        d a t m a . _ c o d e r
+        H O A N G  T H E  T H A N H  D A T
 */
