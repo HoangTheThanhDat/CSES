@@ -54,7 +54,7 @@ datmacoder {
     else cin >> testcase;
 
     while (testcase--) {
-        solve();
+            solve();
     }
 
     return 0;
