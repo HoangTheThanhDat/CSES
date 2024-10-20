@@ -24,40 +24,40 @@ const bool TESTCASE = false;
 int n , a[N];
 
 void solve() {
-    cin >> n;
+        cin >> n;
 
-    for (int i = 1 ; i < n ; i++) cin >> a[i];
+        for (int i = 1 ; i < n ; i++) cin >> a[i];
 
-    sort(a + 1 , a + n);
+        sort(a + 1 , a + n);
 
-    for (int i = 1 ; i < n ; i++) {
-        if (a[i] != i) {
-            cout << i << el;
-            return;
+        for (int i = 1 ; i < n ; i++) {
+                if (a[i] != i) {
+                        cout << i << el;
+                        return;
+                }
         }
-    }
 
-    cout << n << el;
+        cout << n << el;
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-        solve();
-    }
+        while (testcase--) {
+                solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
-  d a t m a . _ c o d e r
-  H O A N G  T H E  T H A N H  D A T
+        d a t m a . _ c o d e r
+        H O A N G  T H E  T H A N H  D A T
 */
