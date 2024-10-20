@@ -24,43 +24,45 @@ const bool TESTCASE = false;
 int n , a[N] , b[N];
 
 void solve() {
-    cin >> n;
+        cin >> n;
 
-    for (int i = 1 ; i <= n ; i++) cin >> a[i] >> b[i];
+        for (int i = 1 ; i <= n ; i++) cin >> a[i] >> b[i];
 
-    sort(a + 1 , a + n + 1);
-    sort(b + 1 , b + n + 1);
+        sort(a + 1 , a + n + 1);
+        sort(b + 1 , b + n + 1);
 
-    int ans = 0 , c = 0 , i = 1 , j = 1;
+        int ans = 0 , c = 0 , i = 1 , j = 1;
 
-    while (i <= n && j <= n) {
-        if (a[i] < b[j]) ++c , ++i;
-        else --c , ++j;
+        while (i <= n && j <= n) {
+                if (a[i] < b[j]) 
+                        ++c , ++i;
+                else 
+                        --c , ++j;
 
-        maximize(ans , c);
-    }
+                maximize(ans , c);
+        }
 
-    cout << ans;
+        cout << ans;
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-        solve();
-    }
+        while (testcase--) {
+            solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
-  d a t m a . _ c o d e r
-  H O A N G  T H E  T H A N H  D A T
+        d a t m a . _ c o d e r
+        H O A N G  T H E  T H A N H  D A T
 */
