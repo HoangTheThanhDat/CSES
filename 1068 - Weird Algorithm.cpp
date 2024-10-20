@@ -24,13 +24,18 @@ const bool TESTCASE = false;
 ll n;
 
 void solve() {
-    cin >> n; cout << n << " ";
-
-    while (n > 1) {
-        if (n & 1) n *= 3 , ++n;
-        else n /= 2;
+        cin >> n; 
         
         cout << n << " ";
+
+        while (n > 1) {
+                if (n & 1) 
+                        n *= 3 , ++n;
+                else
+                        n /= 2;
+
+        
+                cout << n << " ";
     }
 }
 
