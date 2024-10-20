@@ -25,40 +25,39 @@ int n , a[N];
 ll ans = 0;
 
 void solve() {
-    cin >> n;
+        cin >> n;
 
-    a[0] = 0;
+        a[0] = 0;
 
-    for (int i = 1 ; i <= n ; i++) {
-        cin >> a[i];
+        for (int i = 1 ; i <= n ; i++) {
+                cin >> a[i];
         
-        if (a[i] < a[i - 1]) {
-            ans += a[i - 1] - a[i];
-            a[i] = a[i - 1];
+                if (a[i] < a[i - 1]) 
+                        ans += a[i - 1] - a[i] ,
+                        a[i] = a[i - 1];
         }
-    }
 
-    cout << ans;
+        cout << ans;
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-        solve();
-    }
+        while (testcase--) {
+            solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
-  d a t m a . _ c o d e r
-  H O A N G  T H E  T H A N H  D A T
+        d a t m a . _ c o d e r
+        H O A N G  T H E  T H A N H  D A T
 */
