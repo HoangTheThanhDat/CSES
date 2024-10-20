@@ -26,27 +26,27 @@ int n , a[N];
 void solve() {
     cin >> n;
  
-    if (n == 1) cout << 1 << el;
-    else {
-        if (n == 2 || n == 3) cout << "NO SOLUTION" << el;
-        else {
-            int i = 2;
+    if (n == 1) 
+            cout << 1 << el;
+    else
+            if (n == 2 || n == 3) cout << "NO SOLUTION" << el;
+            else {
+                    int i = 2;
  
-            while (i <= n) {
-                cout << i << " ";
+                    while (i <= n) {
+                            cout << i << " ";
  
-                i += 2;
-            }
+                            i += 2;
+                    }
  
-            i = 1;
+                    i = 1;
  
-            while (i <= n) {
-                cout << i << " ";
+                    while (i <= n) {
+                            cout << i << " ";
  
-                i += 2;
-            }
-        } 
-    }
+                            i += 2;
+                    }
+            } 
 }
  
 datmacoder {
@@ -60,7 +60,7 @@ datmacoder {
     else cin >> testcase;
  
     while (testcase--) {
-        solve();
+            solve();
     }
  
     return 0;
