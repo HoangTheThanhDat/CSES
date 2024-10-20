@@ -25,43 +25,43 @@ const bool TESTCASE = true;
 int x , y;
 
 void solve() {
-    cin >> x >> y;
+        cin >> x >> y;
 
-    int val;
+        int val;
 
-    if (x >= y) 
-            if (x & 1)
-                    val = (x - 1) * (x - 1) + 1 ,
-                    cout << val + (y - 1);
-            else 
-                    val = x * x ,
-                    cout << val - (y - 1);
-    else 
-            if (y & 1) 
-                    val = y * y , 
-                    cout << val - (x - 1);
-            else 
-                    val = (y - 1) * (y - 1) + 1 ,
-                    cout << val + (x - 1);
+        if (x >= y) 
+                if (x & 1)
+                        val = (x - 1) * (x - 1) + 1 ,
+                        cout << val + (y - 1);
+                else 
+                        val = x * x ,
+                        cout << val - (y - 1);
+        else 
+                if (y & 1) 
+                        val = y * y , 
+                        cout << val - (x - 1);
+                else 
+                        val = (y - 1) * (y - 1) + 1 ,
+                        cout << val + (x - 1);
 
-    cout << el;
+        cout << el;
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-            solve();
-    }
+        while (testcase--) {
+                solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
