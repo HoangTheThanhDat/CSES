@@ -24,40 +24,40 @@ const bool TESTCASE = false;
 string s;
 
 void solve() {
-    cin >> s;
+        cin >> s;
 
-    s = s + 'a';
+        s = s + 'a';
 
-    int d = 1;
+        int d = 1;
 
-    int ans = 0;
+        int ans = 0;
 
-    for (int i = 1 ; i < s.size() ; i++) 
-            if (s[i] == s[i - 1]) 
-                    ++d;
-            else 
-                    maximize(ans , d) ,
-                    d = 1;
+        for (int i = 1 ; i < s.size() ; i++) 
+                if (s[i] == s[i - 1]) 
+                        ++d;
+                    else 
+                            maximize(ans , d) ,
+                        d = 1;
         
 
-    cout << ans;
+        cout << ans;
 }
 
 datmacoder {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
 
-    openfile("txt");
+        openfile("txt");
 
-    int testcase;
-    if (!TESTCASE) testcase = 1;
-    else cin >> testcase;
+        int testcase;
+        if (!TESTCASE) testcase = 1;
+        else cin >> testcase;
 
-    while (testcase--) {
-            solve();
-    }
+        while (testcase--) {
+                solve();
+        }
 
-    return 0;
+        return 0;
 }
 
 /* 
