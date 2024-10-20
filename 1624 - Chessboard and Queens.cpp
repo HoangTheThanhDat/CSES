@@ -27,22 +27,21 @@ bool row[10 + 10] , dmain[10 + 10] , dsecon[10 + 10];
 ll ans = 0;
 
 void rec(int col) {
-    if (col == 9) {
-        ++ans;
-        return;
-    }
-
-    for (int i = 1 ; i <= 8 ; i++) {
-        if (!row[i] && !dmain[i - col + 8] && !dsecon[i + col] && chess[col][i] == '.') {
-            
-            row[i] = dmain[i - col + 8] = dsecon[i + col] = true;
-            
-            rec(col + 1);
-
-            row[i] = dmain[i - col + 8] = dsecon[i + col] = false;
-
+        if (col == 9) {
+                ++ans;
+                return;
         }
-    }
+
+    for (int i = 1 ; i <= 8 ; i++) 
+            if (!row[i] && !dmain[i - col + 8] && !dsecon[i + col] && chess[col][i] == '.') {
+            
+                    row[i] = dmain[i - col + 8] = dsecon[i + col] = true;
+            
+                    rec(col + 1);
+
+                    row[i] = dmain[i - col + 8] = dsecon[i + col] = false;
+
+            }
 }
 
 void solve() {
