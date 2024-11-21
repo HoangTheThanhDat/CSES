@@ -86,19 +86,19 @@
 1. [2220 - Counting Numbers](2220%20-%20Counting%20Numbers.cpp) [DP Digit]
 
 ## Graph Algorithms
-1. [1192 - Counting Rooms](1192%20-%20Counting%20Rooms.cpp)
-1. [1193 - Labyrinth](1193%20-%20Labyrinth.cpp)
-1. [1666 - Building Roads](1666%20-%20Building%20Roads.cpp)
-1. [1667 - Message Route](1667%20-%20Message%20Route.cpp)
-1. [1668 - Building Teams](1668%20-%20Building%20Teams.cpp)
-1. [1669 - Round Trip](1669%20-%20Round%20Trip.cpp)
-1. [1194 - Monsters](1194%20-%20Monsters.cpp)
-1. [1671 - Shortest Routes I](1671%20-%20Shortest%20Routes%20I.cpp)
-1. [1672 - Shortest Routes II](1672%20-%20Shortest%20Routes%20II.cpp)
-1. [1673 - High Score](1673%20-%20High%20Score.cpp)
-1. [1195 - Flight Discount](1195%20-%20Flight%20Discount.cpp)
-1. [1197 - Cycle Finding](1197%20-%20Cycle%20Finding.cpp)
-1. [1196 - Flight Routes](1196%20-%20Flight%20Routes.cpp)
+1. [1192 - Counting Rooms](1192%20-%20Counting%20Rooms.cpp) [Loang]
+1. [1193 - Labyrinth](1193%20-%20Labyrinth.cpp) [Loang]
+1. [1666 - Building Roads](1666%20-%20Building%20Roads.cpp) [BFS]
+1. [1667 - Message Route](1667%20-%20Message%20Route.cpp) [BFS]
+1. [1668 - Building Teams](1668%20-%20Building%20Teams.cpp) [DFS][BFS]
+1. [1669 - Round Trip](1669%20-%20Round%20Trip.cpp) [DFS]
+1. [1194 - Monsters](1194%20-%20Monsters.cpp) [Loang]
+1. [1671 - Shortest Routes I](1671%20-%20Shortest%20Routes%20I.cpp) [Dijkstra]
+1. [1672 - Shortest Routes II](1672%20-%20Shortest%20Routes%20II.cpp) [Floyd-Warshall]
+1. [1673 - High Score](1673%20-%20High%20Score.cpp) [Bellman-Ford]
+1. [1195 - Flight Discount](1195%20-%20Flight%20Discount.cpp) [Dijkstra with one weight change]
+1. [1197 - Cycle Finding](1197%20-%20Cycle%20Finding.cpp) [Bellman-Ford]
+1. [1196 - Flight Routes](1196%20-%20Flight%20Routes.cpp) [Dijkstra with K shortest path routing]
 1. [1678 - Round Trip II](1678%20-%20Round%20Trip%20II.cpp)
 1. [1679 - Course Schedule](1679%20-%20Course%20Schedule.cpp)
 1. [1680 - Longest Flight Route](1680%20-%20Longest%20Flight%20Route.cpp)
