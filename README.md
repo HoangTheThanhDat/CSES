@@ -99,7 +99,7 @@
 1. [1195 - Flight Discount](1195%20-%20Flight%20Discount.cpp) [Dijkstra with one weight change]
 1. [1197 - Cycle Finding](1197%20-%20Cycle%20Finding.cpp) [Bellman-Ford]
 1. [1196 - Flight Routes](1196%20-%20Flight%20Routes.cpp) [Dijkstra with K shortest path routing]
-1. [1678 - Round Trip II](1678%20-%20Round%20Trip%20II.cpp)
+1. [1678 - Round Trip II](1678%20-%20Round%20Trip%20II.cpp) [DFS]
 1. [1679 - Course Schedule](1679%20-%20Course%20Schedule.cpp)
 1. [1680 - Longest Flight Route](1680%20-%20Longest%20Flight%20Route.cpp)
 1. [1681 - Game Routes](1681%20-%20Game%20Routes.cpp)
