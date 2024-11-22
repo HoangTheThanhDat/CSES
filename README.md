@@ -102,7 +102,7 @@
 1. [1678 - Round Trip II](1678%20-%20Round%20Trip%20II.cpp) [DFS]
 1. [1679 - Course Schedule](1679%20-%20Course%20Schedule.cpp) [Topological Sort]
 1. [1680 - Longest Flight Route](1680%20-%20Longest%20Flight%20Route.cpp) [BFS with degree]
-1. [1681 - Game Routes](1681%20-%20Game%20Routes.cpp)
+1. [1681 - Game Routes](1681%20-%20Game%20Routes.cpp) [BFS with degree and DP]
 1. [1202 - Investigation](1202%20-%20Investigation.cpp)
 1. [1750 - Planets Queries I](1750%20-%20Planets%20Queries%20I.cpp)
 1. [1160 - Planets Queries II](1160%20-%20Planets%20Queries%20II.cpp)
