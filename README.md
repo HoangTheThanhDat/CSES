@@ -104,7 +104,7 @@
 1. [1680 - Longest Flight Route](1680%20-%20Longest%20Flight%20Route.cpp) [BFS with degree]
 1. [1681 - Game Routes](1681%20-%20Game%20Routes.cpp) [BFS with degree and DP]
 1. [1202 - Investigation](1202%20-%20Investigation.cpp) [Dijkstra][DP by Recursion]
-1. [1750 - Planets Queries I](1750%20-%20Planets%20Queries%20I.cpp)
+1. [1750 - Planets Queries I](1750%20-%20Planets%20Queries%20I.cpp) [Binary Jump]
 1. [1160 - Planets Queries II](1160%20-%20Planets%20Queries%20II.cpp)
 1. [1751 - Planets Cycles](1751%20-%20Planets%20Cycles.cpp)
 1. [1675 - Road Reparation](1675%20-%20Road%20Reparation.cpp)
