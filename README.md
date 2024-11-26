@@ -107,7 +107,7 @@
 1. [1750 - Planets Queries I](1750%20-%20Planets%20Queries%20I.cpp) [Binary Lifting]
 1. [1160 - Planets Queries II](1160%20-%20Planets%20Queries%20II.cpp) [Binary Lifting][BFS]
 1. [1751 - Planets Cycles](1751%20-%20Planets%20Cycles.cpp) [DFS]
-1. [1675 - Road Reparation](1675%20-%20Road%20Reparation.cpp)
+1. [1675 - Road Reparation](1675%20-%20Road%20Reparation.cpp) [Kruskal]
 1. [1676 - Road Construction](1676%20-%20Road%20Construction.cpp)
 1. [1682 - Flight Routes Check](1682%20-%20Flight%20Routes%20Check.cpp)
 1. [1683 - Planets and Kingdoms](1683%20-%20Planets%20and%20Kingdoms.cpp)
