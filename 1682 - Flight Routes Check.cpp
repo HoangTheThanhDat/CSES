@@ -23,16 +23,22 @@ const bool TESTCASE = false;
 
 //  ------------------- d a t m a . _ c o d e r -------------------  //
 
-int n , m , u , v;
-vector<int> e[maxn][2];
+int n , m , u , v , low[maxn] , num[maxn] , time_dfs = 0;
 bool vis[maxn];
+vector<int> e[maxn] , vec;
 
-void dfs(int u , int sta) {
-        vis[u] = true;
+void tarjan(int u) {
+        low[u] = num[u] = ++time_dfs;
 
-        for (int v : e[u][sta]) 
-                if (!vis[v]) 
-                        dfs(v , sta);
+        for (int v : e[u]) 
+                if (num[v] == 0) {
+                        tarjan(v);
+                        minimize(low[u] , low[v]);
+                }
+                else minimize(low[u] , num[v]);
+
+        if (low[u] == num[u]) 
+                vec.push_back(u);
 }
 
 void solve() {
@@ -41,27 +47,19 @@ void solve() {
         for (int i = 1 ; i <= m ; i++) {
                 cin >> u >> v;
 
-                e[u][true].push_back(v);
-                e[v][false].push_back(u);
+                e[u].push_back(v);
         }
 
-        reset(vis , false);
+        tarjan(1);
 
-        dfs(1 , true);
-        
         for (int i = 2 ; i <= n ; i++) 
-                if (!vis[i]) 
+                if (num[i] == 0) 
                         return void(cout << "NO" << el << 1 << " " << i << el);
 
-        reset(vis , false);
-
-        dfs(1 , false);
-
-        for (int i = 2 ; i <= n ; i++) 
-                if (!vis[i]) 
-                        return void(cout << "NO" << el << i << " " << 1 << el);
-
-        cout << "YES" << el;
+        if (vec.size() > 1) 
+                cout << "NO" << el << vec[0] << " " << vec[1] << el;
+        else 
+                cout << "YES" << el;
 }
 
 datmacoder {
