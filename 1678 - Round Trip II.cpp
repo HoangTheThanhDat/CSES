@@ -41,7 +41,6 @@ void get_path(int u) {
 }
 
 void dfs(int u) {
-        // cout << u << el;
         for (int v : e[u]) {
                 if (trace[v] == -1) continue;
                 
