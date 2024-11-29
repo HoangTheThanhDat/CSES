@@ -110,7 +110,7 @@
 1. [1675 - Road Reparation](1675%20-%20Road%20Reparation.cpp) [Kruskal]
 1. [1676 - Road Construction](1676%20-%20Road%20Construction.cpp) [Kruskal]
 1. [1682 - Flight Routes Check](1682%20-%20Flight%20Routes%20Check.cpp) [Tarjan]
-1. [1683 - Planets and Kingdoms](1683%20-%20Planets%20and%20Kingdoms.cpp)
+1. [1683 - Planets and Kingdoms](1683%20-%20Planets%20and%20Kingdoms.cpp) [Tarjan]
 1. [1684 - Giant Pizza](1684%20-%20Giant%20Pizza.cpp)
 1. [1686 - Coin Collector](1686%20-%20Coin%20Collector.cpp)
 1. [1691 - Mail Delivery](1691%20-%20Mail%20Delivery.cpp)
