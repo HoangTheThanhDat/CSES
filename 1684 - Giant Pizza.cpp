@@ -79,8 +79,6 @@ void solve() {
         for (int i = 1 ; i <= NOT(m) ; i++) 
                 if (!id[i]) tarjan(i);
 
-        // for (int i = 1 ; i <= NOT(m) ; i++) cout << id[i] << " "; cout << el;
-
         for (int i = 1 ; i <= m ; i++) 
                 if (id[i] == id[NOT(i)]) 
                         return void(cout << "IMPOSSIBLE");
