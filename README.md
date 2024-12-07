@@ -112,7 +112,7 @@
 1. [1682 - Flight Routes Check](1682%20-%20Flight%20Routes%20Check.cpp) [Tarjan]
 1. [1683 - Planets and Kingdoms](1683%20-%20Planets%20and%20Kingdoms.cpp) [Tarjan]
 1. [1684 - Giant Pizza](1684%20-%20Giant%20Pizza.cpp) [2-SAT]
-1. [1686 - Coin Collector](1686%20-%20Coin%20Collector.cpp)
+1. [1686 - Coin Collector](1686%20-%20Coin%20Collector.cpp) [Tarjan][DP]
 1. [1691 - Mail Delivery](1691%20-%20Mail%20Delivery.cpp)
 1. [1692 - De Bruijn Sequence](1692%20-%20De%20Bruijn%20Sequence.cpp)
 1. [1693 - Teleporters Path](1693%20-%20Teleporters%20Path.cpp)
