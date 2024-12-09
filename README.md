@@ -114,7 +114,7 @@
 1. [1684 - Giant Pizza](1684%20-%20Giant%20Pizza.cpp) [2-SAT]
 1. [1686 - Coin Collector](1686%20-%20Coin%20Collector.cpp) [Tarjan][DP]
 1. [1691 - Mail Delivery](1691%20-%20Mail%20Delivery.cpp) [Euler path]
-1. [1692 - De Bruijn Sequence](1692%20-%20De%20Bruijn%20Sequence.cpp)
+1. [1692 - De Bruijn Sequence](1692%20-%20De%20Bruijn%20Sequence.cpp) [Bitwise][Euler path]
 1. [1693 - Teleporters Path](1693%20-%20Teleporters%20Path.cpp)
 1. [1690 - Hamiltonian Flights](1690%20-%20Hamiltonian%20Flights.cpp)
 1. [1689 - Knight's Tour](1689%20-%20Knight's%20Tour.cpp)
