@@ -116,7 +116,7 @@
 1. [1691 - Mail Delivery](1691%20-%20Mail%20Delivery.cpp) [Euler path]
 1. [1692 - De Bruijn Sequence](1692%20-%20De%20Bruijn%20Sequence.cpp) [Bitwise][Euler path]
 1. [1693 - Teleporters Path](1693%20-%20Teleporters%20Path.cpp) [Euler path]
-1. [1690 - Hamiltonian Flights](1690%20-%20Hamiltonian%20Flights.cpp)
+1. [1690 - Hamiltonian Flights](1690%20-%20Hamiltonian%20Flights.cpp) [DP Bitmask]
 1. [1689 - Knight's Tour](1689%20-%20Knight's%20Tour.cpp)
 1. [1694 - Download Speed](1694%20-%20Download%20Speed.cpp)
 1. [1695 - Police Chase](1695%20-%20Police%20Chase.cpp)
