@@ -25,9 +25,38 @@ const bool TESTCASE = false;
 
 int n , m , u , v , indeg[maxn] , outdeg[maxn];
 vector<pair<int , int>> e[maxn];
-vector<int> path;
-stack<int> st;
 bool vis[maxn];
+
+list<int> eulerpath(int u) {
+        list<int> ans;
+
+        ans.push_back(u);
+
+        while (e[u].size() > 0) {
+                int v = e[u].back().fi;
+                int id = e[u].back().se;
+
+                e[u].pop_back();
+
+                if (vis[id] == true) continue;
+
+                vis[id] = true;
+
+                u = v;
+
+                ans.push_back(u);
+        }
+
+        for (list<int>::iterator it = ++ans.begin() ; it != ans.end() ; ++it) {
+                list<int> t = eulerpath(*it);
+
+                t.pop_back();
+
+                ans.splice(it , t);
+        }
+
+        return ans;
+}
 
 void solve() {
         cin >> n >> m;
@@ -47,46 +76,30 @@ void solve() {
         if (indeg[1] + 1 != outdeg[1] || outdeg[n] + 1 != indeg[n]) 
                 return void(cout << "IMPOSSIBLE");
 
-        st.push(1);
+        e[n].push_back(make_pair(1 , m + 1));
 
-        reset(vis , false);
+        list<int> path = eulerpath(1);
 
-        while (st.size() > 0) {
-                bool ok = true;
-
-                int u = st.top();
-
-                while (e[u].size() > 0) {
-                        int v = e[u].back().fi;
-                        int id = e[u].back().se;
-
-                        e[u].pop_back();
-
-                        if (!vis[id]) {
-                                vis[id] = true;
-                                st.push(v);
-                                ok = false;
-                                break;
-                        }
-                }
-                
-                if (ok) path.push_back(u) , st.pop();
-        }
-
-        if (path.size() != m + 1) 
+        if (path.size() != m + 2) 
                 cout << "IMPOSSIBLE";
-        else {
-                reverse(path.begin() , path.end());
+        else 
+                for (list<int>::iterator it1 = path.begin() , it2 = ++path.begin() ; it2 != path.end() ; ++it1 , ++it2) 
+                        if (*it1 == n && *it2 == 1) {
+                                for (list<int>::iterator it = it2 ; it != path.end() ; ++it) 
+                                        cout << *it << " ";
+                                
+                                for (list<int>::iterator it = ++path.begin() ; it != it2 ; ++it)
+                                        cout << *it << " ";
 
-                for (int i : path) cout << i << " ";
-        }
+                                return;
+                        }
 }
 
 datmacoder {
         ios_base::sync_with_stdio(false);
         cin.tie(NULL); cout.tie(NULL);
 
-        openfile("nofile");
+        openfile("txt");
 
         return 0;
 }
