@@ -20,7 +20,7 @@
 1. [1754 - Coin Piles](1754%20-%20Coin%20Piles.cpp)
 1. [1755 - Palindrome Reorder](1755%20-%20Palindrome%20Reorder.cpp)
 1. [2205 - Gray Code](2205%20-%20Gray%20Code.cpp)
-1. [2165 - Tower of Hanoi](2165%20-%20Tower%20of%20Hanoi.cpp) [Recursion]
+1. [2165 - Tower of Hanoi](2165%20-%20Tower%20of%20Hanoi.cpp) [Back Tracking]
 1. [1622 - Creating Strings](1622%20-%20Creating%20Strings.cpp)
 1. [1623 - Apple Division](1623%20-%20Apple%20Division.cpp)
 1. [1624 - Chessboard and Queens](1624%20-%20Chessboard%20and%20Queens.cpp)
@@ -77,7 +77,7 @@
 1. [1639 - Edit Distance](1639%20-%20Edit%20Distance.cpp)
 1. [1744 - Rectangle Cutting](1744%20-%20Rectangle%20Cutting.cpp)
 1. [1745 - Money Sums](1745%20-%20Money%20Sums.cpp)
-1. [1097 - Removal Game](1097%20-%20Removal%20Game.cpp) [Recursion]
+1. [1097 - Removal Game](1097%20-%20Removal%20Game.cpp) [DP][Recursion]
 1. [1093 - Two Sets II](1093%20-%20Two%20Sets%20II.cpp)
 1. [1145 - Increasing Subsequence](1145%20-%20Increasing%20Subsequence.cpp) [LIS]
 1. [1140 - Projects](1140%20-%20Projects.cpp)
@@ -117,7 +117,7 @@
 1. [1692 - De Bruijn Sequence](1692%20-%20De%20Bruijn%20Sequence.cpp) [Bitwise][Euler path]
 1. [1693 - Teleporters Path](1693%20-%20Teleporters%20Path.cpp) [Euler path]
 1. [1690 - Hamiltonian Flights](1690%20-%20Hamiltonian%20Flights.cpp) [DP Bitmask]
-1. [1689 - Knight's Tour](1689%20-%20Knight's%20Tour.cpp)
+1. [1689 - Knight's Tour](1689%20-%20Knight's%20Tour.cpp) [Back Tracking]
 1. [1694 - Download Speed](1694%20-%20Download%20Speed.cpp)
 1. [1695 - Police Chase](1695%20-%20Police%20Chase.cpp)
 1. [1696 - School Dance](1696%20-%20School%20Dance.cpp)
