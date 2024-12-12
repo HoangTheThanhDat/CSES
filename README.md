@@ -115,7 +115,7 @@
 1. [1686 - Coin Collector](1686%20-%20Coin%20Collector.cpp) [tarjan][dp]
 1. [1691 - Mail Delivery](1691%20-%20Mail%20Delivery.cpp) [euler-path][fleury]
 1. [1692 - De Bruijn Sequence](1692%20-%20De%20Bruijn%20Sequence.cpp) [bitwise][euler-path][fleury]
-1. [1693 - Teleporters Path](1693%20-%20Teleporters%20Path.cpp) [euler-path][fleury]
+1. [1693 - Teleporters Path](1693%20-%20Teleporters%20Path.cpp) [euler-path][hierholzer]
 1. [1690 - Hamiltonian Flights](1690%20-%20Hamiltonian%20Flights.cpp) [dp-bitmask]
 1. [1689 - Knight's Tour](1689%20-%20Knight's%20Tour.cpp) [back-tracking]
 1. [1694 - Download Speed](1694%20-%20Download%20Speed.cpp)
