@@ -30,7 +30,7 @@ int d[maxn] , x[maxn] , y[maxn];
 bool bfs() {
         queue<int> q;
 
-        for (int u = 1 ; u <= m ; u++) 
+        for (int u = 1 ; u <= n ; u++) 
                 if (!x[u]) 
                         d[u] = 0 , 
                         q.push(u);
