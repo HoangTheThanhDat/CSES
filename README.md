@@ -122,3 +122,24 @@
 1. [1695 - Police Chase](1695%20-%20Police%20Chase.cpp) [maximum-flow][edmonds-karp]
 1. [1696 - School Dance](1696%20-%20School%20Dance.cpp) [maximum-matching][hop-croft-karp]
 1. [1711 - Distinct Routes](1711%20-%20Distinct%20Routes.cpp) [maximum-flow][edmonds-karp]
+
+## Range Queries
+1. [1646 - Static Range Sum Queries](1646%20-%20Static%20Range%20Sum%20Queries.cpp)
+1. [1647 - Static Range Minimum Queries](1647%20-%20Static%20Range%20Minimum%20Queries.cpp)
+1. [1648 - Dynamic Range Sum Queries](1648%20-%20Dynamic%20Range%20Sum%20Queries.cpp)
+1. [1649 - Dynamic Range Minimum Queries](1649%20-%20Dynamic%20Range%20Minimum%20Queries.cpp)
+1. [1650 - Range Xor Queries](1650%20-%20Range%20Xor%20Queries.cpp)
+1. [1651 - Range Update Queries](1651%20-%20Range%20Update%20Queries.cpp)
+1. [1652 - Forest Queries](1652%20-%20Forest%20Queries.cpp)
+1. [1143 - Hotel Queries](1143%20-%20Hotel%20Queries.cpp)
+1. [1749 - List Removals](1749%20-%20List%20Removals.cpp)
+1. [1144 - Salary Queries](1144%20-%20Salary%20Queries.cpp)
+1. [2166 - Prefix Sum Queries](2166%20-%20Prefix%20Sum%20Queries.cpp)
+1. [2206 - Pizzeria Queries](2206%20-%20Pizzeria%20Queries.cpp)
+1. [1190 - Subarray Sum Queries](1190%20-%20Subarray%20Sum%20Queries.cpp)
+1. [1734 - Distinct Values Queries](1734%20-%20Distinct%20Values%20Queries.cpp)
+1. [2416 - Increasing Array Queries](2416%20-%20Increasing%20%Array%20Queries.cpp)
+1. [1739 - Forest Queries II](1739%20-%20Forest%20Queries%20II.cpp)
+1. [1735 - Range Updates and Sums](1735%20-%20Range%20Updates%20and%20Sums.cpp)
+1. [1736 - Polynomial Queries](1736%20-%20Polynomial%20Queries.cpp)
+1. [1737 - Range Queries and Copies](1737%20-%20Range%20Queries%20and%20Copies.cpp)
