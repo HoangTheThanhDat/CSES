@@ -103,7 +103,7 @@
 1. [1679 - Course Schedule](1679%20-%20Course%20Schedule.cpp) [topo-sort]
 1. [1680 - Longest Flight Route](1680%20-%20Longest%20Flight%20Route.cpp) [bfs-with-degree]
 1. [1681 - Game Routes](1681%20-%20Game%20Routes.cpp) [bfs-with-degree][dp]
-1. [1202 - Investigation](1202%20-%20Investigation.cpp) [dijkstra][dp]recursion]
+1. [1202 - Investigation](1202%20-%20Investigation.cpp) [dijkstra][dp][recursion]
 1. [1750 - Planets Queries I](1750%20-%20Planets%20Queries%20I.cpp) [binary-lifting]
 1. [1160 - Planets Queries II](1160%20-%20Planets%20Queries%20II.cpp) [binary-lifting][bfs]
 1. [1751 - Planets Cycles](1751%20-%20Planets%20Cycles.cpp) [dfs]
