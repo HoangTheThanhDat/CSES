@@ -4,7 +4,7 @@
 - [Sorting and Searching](#Sorting-and-Searching)
 - [Dynamic Programming](#Dynamic-Programming)
 - [Graph Algorithms](#Graph-Algorithms)
-- [Range Queries](#Range-Queries).
+- [Range Queries](#Range-Queries)
 
 ## Introductory Problems
 
