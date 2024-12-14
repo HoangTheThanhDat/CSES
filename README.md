@@ -125,7 +125,7 @@
 1. [1711 - Distinct Routes](1711%20-%20Distinct%20Routes.cpp) [maximum-flow][edmonds-karp]
 
 ## Range Queries
-1. [1646 - Static Range Sum Queries](1646%20-%20Static%20Range%20Sum%20Queries.cpp)
+1. [1646 - Static Range Sum Queries](1646%20-%20Static%20Range%20Sum%20Queries.cpp) [fenwick-tree]
 1. [1647 - Static Range Minimum Queries](1647%20-%20Static%20Range%20Minimum%20Queries.cpp)
 1. [1648 - Dynamic Range Sum Queries](1648%20-%20Dynamic%20Range%20Sum%20Queries.cpp)
 1. [1649 - Dynamic Range Minimum Queries](1649%20-%20Dynamic%20Range%20Minimum%20Queries.cpp)
