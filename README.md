@@ -131,7 +131,7 @@
 1. [1649 - Dynamic Range Minimum Queries](1649%20-%20Dynamic%20Range%20Minimum%20Queries.cpp) [segment-tree]
 1. [1650 - Range Xor Queries](1650%20-%20Range%20Xor%20Queries.cpp) [segment-tree]
 1. [1651 - Range Update Queries](1651%20-%20Range%20Update%20Queries.cpp) [segment-tree-with-lazy-update]
-1. [1652 - Forest Queries](1652%20-%20Forest%20Queries.cpp)
+1. [1652 - Forest Queries](1652%20-%20Forest%20Queries.cpp) [prefix-sum]
 1. [1143 - Hotel Queries](1143%20-%20Hotel%20Queries.cpp)
 1. [1749 - List Removals](1749%20-%20List%20Removals.cpp)
 1. [1144 - Salary Queries](1144%20-%20Salary%20Queries.cpp)
