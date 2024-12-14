@@ -119,6 +119,6 @@
 1. [1690 - Hamiltonian Flights](1690%20-%20Hamiltonian%20Flights.cpp) [dp-bitmask]
 1. [1689 - Knight's Tour](1689%20-%20Knight's%20Tour.cpp) [back-tracking]
 1. [1694 - Download Speed](1694%20-%20Download%20Speed.cpp) [maximum-flow][edmonds-karp]
-1. [1695 - Police Chase](1695%20-%20Police%20Chase.cpp)
+1. [1695 - Police Chase](1695%20-%20Police%20Chase.cpp) [maximum-flow][edmonds-karp]
 1. [1696 - School Dance](1696%20-%20School%20Dance.cpp)
 1. [1711 - Distinct Routes](1711%20-%20Distinct%20Routes.cpp)
