@@ -135,7 +135,7 @@
 1. [1143 - Hotel Queries](1143%20-%20Hotel%20Queries.cpp) [binary-search-on-segment-tree]
 1. [1749 - List Removals](1749%20-%20List%20Removals.cpp) [binary-search-on-segment-tree-with-lazy-update]
 1. [1144 - Salary Queries](1144%20-%20Salary%20Queries.cpp) [segment-tree][discretizing]
-1. [2166 - Prefix Sum Queries](2166%20-%20Prefix%20Sum%20Queries.cpp)
+1. [2166 - Prefix Sum Queries](2166%20-%20Prefix%20Sum%20Queries.cpp) [segment-tree-with-lazy-update]
 1. [2206 - Pizzeria Queries](2206%20-%20Pizzeria%20Queries.cpp)
 1. [1190 - Subarray Sum Queries](1190%20-%20Subarray%20Sum%20Queries.cpp)
 1. [1734 - Distinct Values Queries](1734%20-%20Distinct%20Values%20Queries.cpp)
