@@ -13,7 +13,8 @@ int32_t main() {
         int ans = 1 , cnt = 1;
 
         for (int i = 1 ; i < st.size() ; i++) 
-                if (st[i] == st[i - 1]) ++cnt;
+                if (st[i] == st[i - 1]) 
+                        ++cnt;
                 else {
                         ans = max(ans , cnt);
                         cnt = 1;
