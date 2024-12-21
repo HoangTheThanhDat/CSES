@@ -31,7 +31,7 @@
 ## Sorting and Searching
 1. [1621 - Distinct Numbers](1621%20-%20Distinct%20Numbers.cpp)
 1. [1084 - Apartments](1084%20-%20Apartments.cpp) [two-pointer]
-1. [1090 - Ferris Wheel](1090%20-%20Ferris%20Wheel.cpp)
+1. [1090 - Ferris Wheel](1090%20-%20Ferris%20Wheel.cpp) [two-pointer]
 1. [1091 - Concert Tickets](1091%20-%20Concert%20Tickets.cpp)
 1. [1619 - Restaurant Customers](1619%20-%20Restaurant%20Customers.cpp)
 1. [1629 - Movie Festival](1629%20-%20Movie%20Festival.cpp)
