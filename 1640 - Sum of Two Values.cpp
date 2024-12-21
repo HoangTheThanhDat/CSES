@@ -2,36 +2,22 @@
 
 using namespace std;
 
-#define ll long long
-#define fi first 
-#define se second 
-#define el '\n'
-#define reset(__a , __v) memset(__a,__v,sizeof(__a))
-#define datmacoder int32_t main()
-#define openfile(__dat) if (fopen(__dat".inp","r")){freopen(__dat".inp","r",stdin);freopen(__dat".out","w",stdout);}
+const int maxn = 2e5 + 68;
 
-template<class A,class B> inline void maximize(A& x, B y) {x = max(x, y);};
-template<class A,class B> inline void minimize(A& x, B y) {x = min(x, y);};
-
-const int N = 2e5 + 68;
-const int mod = 1e9 + 7;
-const int inf = 2e9 + 1e8 + 6688;
-const ll oo = 3e18 + 1e17 + 666888;
-const bool TESTCASE = false;
-
-//  ------------------- d a t m a . _ c o d e r -------------------  //
-
-int n , x , so;
-pair<int , int> a[N];
+int n , x , val;
+pair<int , int> a[maxn];
 set<pair<int , int>> s;
 
-void solve() {
+int32_t main() {
+        ios_base::sync_with_stdio(false);
+        cin.tie(0); cout.tie(0);
+
         cin >> n >> x;
-
+        
         for (int i = 1 ; i <= n ; i++) {
-                cin >> so;
+                cin >> val;
 
-                a[i] = {so , i};
+                a[i] = make_pair(val , i);
 
                 s.insert(a[i]);
         }
@@ -39,38 +25,18 @@ void solve() {
         sort(a + 1 , a + n + 1);
 
         for (int i = 1 ; i <= n ; i++) {
-                int val = x - a[i].fi;
+                val = x - a[i].first;
 
-                set<pair<int , int>>::iterator y = s.lower_bound({val , a[i].se + 1});
+                set<pair<int , int>>::iterator y = s.lower_bound(make_pair(val , a[i].second + 1));
 
                 if (y != s.end()) 
-                        if (y -> fi == val) {
-                                cout << min(a[i].se , (int)y -> se) << " " << max(a[i].se , (int)y -> se) << el;
-                                return;
+                        if (y->first == val) {
+                                cout << min(a[i].second , y->second) << " " << max(a[i].second , y->second);
+                                return 0;
                         }
         }
 
-        cout << "IMPOSSIBLE" << el;
-}
-
-datmacoder {
-        ios_base::sync_with_stdio(false);
-        cin.tie(NULL); cout.tie(NULL);
-
-        openfile("txt");
-
-        int testcase;
-        if (!TESTCASE) testcase = 1;
-        else cin >> testcase;
-
-        while (testcase--) {
-                solve();
-        }
+        cout << "IMPOSSIBLE";
 
         return 0;
 }
-
-/* 
-        d a t m a . _ c o d e r
-        H O A N G   T H E   T H A N H   D A T
-*/
