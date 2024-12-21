@@ -33,7 +33,7 @@
 1. [1084 - Apartments](1084%20-%20Apartments.cpp) [two-pointer]
 1. [1090 - Ferris Wheel](1090%20-%20Ferris%20Wheel.cpp) [two-pointer]
 1. [1091 - Concert Tickets](1091%20-%20Concert%20Tickets.cpp) [set][binary-search]
-1. [1619 - Restaurant Customers](1619%20-%20Restaurant%20Customers.cpp)
+1. [1619 - Restaurant Customers](1619%20-%20Restaurant%20Customers.cpp) [two-pointer]
 1. [1629 - Movie Festival](1629%20-%20Movie%20Festival.cpp)
 1. [1640 - Sum of Two Values](1640%20-%20Sum%20of%20Two%20Values.cpp)
 1. [1643 - Maximum Subarray Sum](1643%20-%20Maximum%20Subarray%20Sum.cpp)
