@@ -10,7 +10,7 @@ int32_t main() {
 
         cin >> n;
 
-        cout << n << " ";
+        cout << n << ' ';
 
         while (n != 1) {
                 if (n & 1) 
