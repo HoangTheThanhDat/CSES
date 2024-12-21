@@ -36,7 +36,7 @@
 1. [1619 - Restaurant Customers](1619%20-%20Restaurant%20Customers.cpp) [two-pointer]
 1. [1629 - Movie Festival](1629%20-%20Movie%20Festival.cpp)
 1. [1640 - Sum of Two Values](1640%20-%20Sum%20of%20Two%20Values.cpp)
-1. [1643 - Maximum Subarray Sum](1643%20-%20Maximum%20Subarray%20Sum.cpp)
+1. [1643 - Maximum Subarray Sum](1643%20-%20Maximum%20Subarray%20Sum.cpp) [dp]
 1. [1074 - Stick Lengths](1074%20-%20Stick%20Lengths.cpp)
 1. [2183 - Missing Coin Sum](2183%20-%20Missing%20Coin%20Sum.cpp)
 1. [2216 - Collecting Numbers](2216%20-%20Collecting%20Numbers.cpp)
