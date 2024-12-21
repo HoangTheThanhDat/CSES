@@ -25,7 +25,7 @@
 1. [1622 - Creating Strings](1622%20-%20Creating%20Strings.cpp)
 1. [1623 - Apple Division](1623%20-%20Apple%20Division.cpp) [bitmask]
 1. [1624 - Chessboard and Queens](1624%20-%20Chessboard%20and%20Queens.cpp) [back-tracking]
-1. [2431 - Digit Queries](2431%20-%20Digit%20Queries.cpp) [back-tracking]
+1. [2431 - Digit Queries](2431%20-%20Digit%20Queries.cpp) 
 1. [1625 - Grid Paths](1625%20-%20Grid%20Paths.cpp) [back-tracking]
 
 ## Sorting and Searching
