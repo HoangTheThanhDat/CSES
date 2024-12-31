@@ -141,6 +141,6 @@
 1. [1734 - Distinct Values Queries](1734%20-%20Distinct%20Values%20Queries.cpp) [fenwick-tree][discretizing]
 1. [2416 - Increasing Array Queries](2416%20-%20Increasing%20%Array%20Queries.cpp) [fenwick-tree-2d]
 1. [1739 - Forest Queries II](1739%20-%20Forest%20Queries%20II.cpp) [segment-tree]
-1. [1735 - Range Updates and Sums](1735%20-%20Range%20Updates%20and%20Sums.cpp)
-1. [1736 - Polynomial Queries](1736%20-%20Polynomial%20Queries.cpp)
+1. [1735 - Range Updates and Sums](1735%20-%20Range%20Updates%20and%20Sums.cpp) [segment-tree]
+1. [1736 - Polynomial Queries](1736%20-%20Polynomial%20Queries.cpp) [segment-tree]
 1. [1737 - Range Queries and Copies](1737%20-%20Range%20Queries%20and%20Copies.cpp)
