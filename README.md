@@ -35,13 +35,13 @@
 1. [1091 - Concert Tickets](1091%20-%20Concert%20Tickets.cpp) [set][binary-search]
 1. [1619 - Restaurant Customers](1619%20-%20Restaurant%20Customers.cpp) [two-pointer]
 1. [1629 - Movie Festival](1629%20-%20Movie%20Festival.cpp)
-1. [1640 - Sum of Two Values](1640%20-%20Sum%20of%20Two%20Values.cpp)
+1. [1640 - Sum of Two Values](1640%20-%20Sum%20of%20Two%20Values.cpp) [set][binary-search]
 1. [1643 - Maximum Subarray Sum](1643%20-%20Maximum%20Subarray%20Sum.cpp) [dp]
 1. [1074 - Stick Lengths](1074%20-%20Stick%20Lengths.cpp) [prefix-sum][suffix-sum]
 1. [2183 - Missing Coin Sum](2183%20-%20Missing%20Coin%20Sum.cpp)
 1. [2216 - Collecting Numbers](2216%20-%20Collecting%20Numbers.cpp)
 1. [2217 - Collecting Numbers II](2217%20-%20Collecting%20Numbers%20II.cpp)
-1. [1141 - Playlist](1141%20-%20Playlist.cpp)
+1. [1141 - Playlist](1141%20-%20Playlist.cpp) [set][binary-search]
 1. [1073 - Towers](1073%20-%20Towers.cpp)
 1. [1163 - Traffic Lights](1163%20-%20Traffic%20Lights.cpp)
 1. [2162 - Josephus Problem I](2162%20-%20Josephus%20Problem%20I.cpp)
