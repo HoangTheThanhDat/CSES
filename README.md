@@ -42,7 +42,7 @@
 1. [2216 - Collecting Numbers](2216%20-%20Collecting%20Numbers.cpp)
 1. [2217 - Collecting Numbers II](2217%20-%20Collecting%20Numbers%20II.cpp)
 1. [1141 - Playlist](1141%20-%20Playlist.cpp) [set][binary-search]
-1. [1073 - Towers](1073%20-%20Towers.cpp)
+1. [1073 - Towers](1073%20-%20Towers.cpp) [binary-search]
 1. [1163 - Traffic Lights](1163%20-%20Traffic%20Lights.cpp)
 1. [2162 - Josephus Problem I](2162%20-%20Josephus%20Problem%20I.cpp)
 1. [2163 - Josephus Problem II](2163%20-%20Josephus%20Problem%20II.cpp) [blocks]
