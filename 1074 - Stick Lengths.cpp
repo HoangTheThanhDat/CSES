@@ -2,77 +2,42 @@
 
 using namespace std;
 
-#define ll long long
-#define fi first 
-#define se second 
-#define el '\n'
-#define reset(__a , __v) memset(__a,__v,sizeof(__a))
-#define datmacoder int32_t main()
-#define openfile(__dat) if (fopen(__dat".inp","r")){freopen(__dat".inp","r",stdin);freopen(__dat".out","w",stdout);}
+const int maxn = 2e5 + 68;
+const long long inf = 1e18;
 
-template<class A,class B> inline void maximize(A& x, B y) {x = max(x, y);};
-template<class A,class B> inline void minimize(A& x, B y) {x = min(x, y);};
+int n , a[maxn];
+long long prefix[maxn] , suffix[maxn];
 
-const int N = 2e5 + 68;
-const int mod = 1e9 + 7;
-const int inf = 2e9 + 1e8 + 6688;
-const ll oo = 3e18 + 1e17 + 666888;
-const bool TESTCASE = false;
+int32_t main() {
+        ios_base::sync_with_stdio(false);
+        cin.tie(0); cout.tie(0);
 
-//  ------------------- d a t m a . _ c o d e r -------------------  //
-
-int n;
-ll a[N] , suf[N] , pre[N];
-
-void solve() {
         cin >> n;
-
-        pre[0] = 0;
 
         for (int i = 1 ; i <= n ; i++) cin >> a[i];
 
         sort(a + 1 , a + n + 1);
 
-        for (int i = 1 ; i <= n ; i++) 
-                pre[i] = pre[i - 1] + a[i];
+        prefix[0] = 0;
 
-        suf[n + 1] = 0;
+        for (int i = 1 ; i <= n ; i++) prefix[i] = prefix[i - 1] + a[i];
 
-        for (int i = n ; i > 0 ; i--) 
-                suf[i] = suf[i + 1] + a[i];
+        suffix[n + 1] = 0;
 
-        ll ans = oo;
+        for (int i = n ; i > 0 ; i--) suffix[i] = suffix[i + 1] + a[i];
+
+        long long ans = inf;
 
         for (int i = 1 ; i <= n ; i++) {
-                ll c = 0;
+                long long c = 0;
 
-                c += a[i] * (i - 1) - pre[i - 1];
-                c += suf[i + 1] - a[i] * (n - i);
+                c += 1ll * a[i] * (i - 1) - prefix[i - 1];
+                c += suffix[i + 1] - 1ll * a[i] * (n - i);
 
-                minimize(ans , c);
+                ans = min(ans , c);
         }
 
         cout << ans;
-}
-
-datmacoder {
-        ios_base::sync_with_stdio(false);
-        cin.tie(NULL); cout.tie(NULL);
-
-        openfile("txt");
-
-        int testcase;
-        if (!TESTCASE) testcase = 1;
-        else cin >> testcase;
-
-        while (testcase--) {
-            solve();
-        }
 
         return 0;
 }
-
-/* 
-        d a t m a . _ c o d e r
-        H O A N G   T H E   T H A N H   D A T
-*/
