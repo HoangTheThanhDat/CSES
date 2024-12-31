@@ -2,29 +2,15 @@
 
 using namespace std;
 
-#define ll long long
-#define fi first 
-#define se second 
-#define el '\n'
-#define reset(__a , __v) memset(__a,__v,sizeof(__a))
-#define datmacoder int32_t main()
-#define openfile(__dat) if (fopen(__dat".inp","r")){freopen(__dat".inp","r",stdin);freopen(__dat".out","w",stdout);}
+const int maxn = 2e5 + 68;
 
-template<class A,class B> inline void maximize(A& x, B y) {x = max(x, y);};
-template<class A,class B> inline void minimize(A& x, B y) {x = min(x, y);};
-
-const int N = 2e5 + 68;
-const int mod = 1e9 + 7;
-const int inf = 2e9 + 1e8 + 6688;
-const ll oo = 3e18 + 1e17 + 666888;
-const bool TESTCASE = false;
-
-//  ------------------- d a t m a . _ c o d e r -------------------  //
-
-int n , a[N] , cur , ans;
+int n , a[maxn] , cur , ans;
 set<pair<int , int>> s;
 
-void solve() {
+int32_t main() {
+        ios_base::sync_with_stdio(false);
+        cin.tie(0); cout.tie(0);
+
         cin >> n;
 
         cur = 1; ans = 0;
@@ -32,41 +18,20 @@ void solve() {
         for (int i = 1 ; i <= n ; i++) {
                 cin >> a[i];
 
-                set<pair<int , int>>::iterator x = s.lower_bound({a[i] , -1});
+                set<pair<int , int>>::iterator x = s.lower_bound(make_pair(a[i] , -1));
 
-                if (x != s.end() && x -> fi == a[i]) {
-                        for (int j = cur ; j <= x -> se ; j++) 
-                                s.erase({a[j] , j});
+                if (x != s.end() && x->first == a[i]) {
+                        for (int j = cur ; j <= x->second ; j++) s.erase(make_pair(a[j] , j));
 
-                        cur = x -> se + 1;
+                        cur = x->second + 1;       
                 }
 
-                s.insert({a[i] , i});
+                s.insert(make_pair(a[i] , i));
 
-                maximize(ans , (int)s.size());
+                ans = max(ans , (int)s.size());
         }
 
         cout << ans;
-}
-
-datmacoder {
-        ios_base::sync_with_stdio(false);
-        cin.tie(NULL); cout.tie(NULL);
-
-        openfile("txt");
-
-        int testcase;
-        if (!TESTCASE) testcase = 1;
-        else cin >> testcase;
-
-        while (testcase--) {
-            solve();
-        }
 
         return 0;
 }
-
-/* 
-        d a t m a . _ c o d e r
-        H O A N G   T H E   T H A N H   D A T
-*/
