@@ -5,6 +5,7 @@
 - [Dynamic Programming](#Dynamic-Programming)
 - [Graph Algorithms](#Graph-Algorithms)
 - [Range Queries](#Range-Queries)
+- [Tree Algorithms](#Tree-Algorithms)
 
 ## Introductory Problems
 
