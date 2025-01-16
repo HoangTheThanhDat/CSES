@@ -144,3 +144,21 @@
 1. [1735 - Range Updates and Sums](1735%20-%20Range%20Updates%20and%20Sums.cpp) [segment-tree]
 1. [1736 - Polynomial Queries](1736%20-%20Polynomial%20Queries.cpp) [segment-tree]
 1. [1737 - Range Queries and Copies](1737%20-%20Range%20Queries%20and%20Copies.cpp) [persistent-segment-tree]
+
+## Tree Algorithms
+1. [1674 - Subordinates](1674%20-%20Subordinates.cpp)
+1. [1130 - Tree Matching](1130%20-%20Tree%20Matching.cpp)
+1. [1131 - Tree Diameter](1131%20-%20Tree%20Diameter.cpp)
+1. [1132 - Tree Distances I](1132%20-%20Tree%20Distances%20I.cpp)
+1. [1133 - Tree Distances II](1133%20-%20Tree%20Distances%20II.cpp)
+1. [1687 - Company Queries I](1687%20-%20Company%20Queries%20I.cpp)
+1. [1688 - Company Queries II](1688%20-%20Company%20Queries%20II.cpp)
+1. [1135 - Distance Queries](1135%20-%20Distance%20Queries.cpp)
+1. [1136 - Counting Paths](1136%20-%20Counting%20Paths.cpp)
+1. [1137 - Subtree Queries](1137%20-%20Subtree%20Queries.cpp)
+1. [1138 - Path Queries](1138%20-%20Path%20Queries.cpp)
+1. [2134 - Path Queries II](2134%20-%20Path%20Queries%20II.cpp)
+1. [1139 - Distinct Colors](1139%20-%20Distinct%20Colors.cpp)
+1. [2079 - Finding a Centroid](2079%20-%20Finding%20a%20Centroid.cpp)
+1. [2080 - Fixed-Length Paths I](2080%20-%20Fixed-Length%20Paths%20I.cpp)
+1. [2081 - Fixed-Length Paths II](2081%20-%20Fixed-Length%20Paths%20II.cpp)
