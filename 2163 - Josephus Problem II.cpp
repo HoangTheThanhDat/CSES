@@ -2,64 +2,48 @@
 
 using namespace std;
 
-#define ll long long
-#define fi first 
-#define se second 
-#define el '\n'
-#define reset(__a , __v) memset(__a,__v,sizeof(__a))
-#define datmacoder int32_t main()
-#define openfile(__dat) if (fopen(__dat".inp","r")){freopen(__dat".inp","r",stdin);freopen(__dat".out","w",stdout);}
+const int maxn = 2e5 + 68;
+const int maxblock = 500;
 
-template<class A,class B> inline void maximize(A& x, B y) {x = max(x, y);};
-template<class A,class B> inline void minimize(A& x, B y) {x = min(x, y);};
-
-const int N = 2e5 + 68;
-const int mod = 1e9 + 7;
-const int inf = 2e9 + 1e8 + 6688;
-const ll oo = 3e18 + 1e17 + 666888;
-const bool TESTCASE = false;
-
-//  ------------------- d a t m a . _ c o d e r -------------------  //
-
-struct Data {
+struct datablock {
         int l , r , sz;
 };
 
-int n , K , c = 0 , Sqrt;
-Data Block[N];
-bool visited[N];
+int n , K , c = 0;
+datablock block[maxblock];
+bool vis[maxn];
 
-
-int getBlock(int i) {
-        return (i - 1) / Sqrt + 1;
+int getblock(int i) {
+        return (i - 1) / maxblock + 1;
 }
 
-void solve() {
-        cin >> n >> K;
+int32_t main() {
+        ios_base::sync_with_stdio(false);
+        cin.tie(0); cout.tie(0);
 
-        Sqrt = sqrt(n);
+        cin >> n >> K;
 
         int i = 1;
 
-        while (i + Sqrt <= n) {
+        while (i + maxblock <= n) {
                 ++c;
 
-                Block[c].l = i;
-                Block[c].r = i + Sqrt - 1;
-                Block[c].sz = Sqrt;
+                block[c].l = i;
+                block[c].r = i + maxblock - 1;
+                block[c].sz = maxblock;
 
-                i += Sqrt;
+                i += maxblock;
         }
 
-        if (Block[c].r < n) {
+        if (block[c].r < n) {
                 ++c;
-
-                Block[c].l = Block[c - 1].r + 1;
-                Block[c].r = n;
-                Block[c].sz = n - Block[c - 1].r;
+                
+                block[c].l = block[c - 1].r + 1;
+                block[c].r = n;
+                block[c].sz = n - block[c - 1].r;
         }
 
-        reset(visited , false);
+        memset(vis , false , sizeof vis);
 
         int j = 0;
 
@@ -70,73 +54,48 @@ void solve() {
         while (j < n) {
                 int cnt = 0;
 
-                ++j;    
-
                 cout << i << " ";
 
+                ++j;
                 if (j == n) continue;
 
                 int k = K % (n - j);
 
-                visited[i] = true;
+                vis[i] = true;
 
-                int get = getBlock(i);
-
-                --Block[get].sz;
+                int get = getblock(i);
+                --block[get].sz;
 
                 bool stop = false;
 
-                for (int x = i + 1 ; x <= Block[get].r ; x++) 
-                        if (!visited[x]) {
+                for (int x = i + 1 ; x <= block[get].r ; ++x) 
+                        if (!vis[x]) {
                                 ++cnt;
-
                                 if (cnt == k + 1) {
                                         i = x;
                                         stop = true;
                                         break;
                                 }
                         }
-
+                
                 if (stop) continue;
 
-                int x = get + 1; if (x > c) x = 1;
+                int x = (get + 1 > c ? 1 : get + 1);
 
-                while (cnt + Block[x].sz < k + 1) {
-                        cnt += Block[x].sz;
-            
-                        ++x; if (x > c) x = 1;
+                while (cnt + block[x].sz < k + 1) {
+                        cnt += block[x].sz;
+                        x = (x + 1 > c ? 1 : x + 1);
                 }
 
-                for (int y = Block[x].l ; y <= Block[x].r ; y++) 
-                        if (!visited[y]) {
+                for (int y = block[x].l ; y <= block[x].r ; ++y) 
+                        if (!vis[y]) {
                                 ++cnt;
-
                                 if (cnt == k + 1) {
                                         i = y;
                                         break;
                                 }
                         }
         }
-}
-
-datmacoder {
-        ios_base::sync_with_stdio(false);
-        cin.tie(NULL); cout.tie(NULL);
-
-        openfile("txt");
-
-        int testcase;
-        if (!TESTCASE) testcase = 1;
-        else cin >> testcase;
-
-        while (testcase--) {
-            solve();
-        }
 
         return 0;
 }
-
-/* 
-        d a t m a . _ c o d e r
-        H O A N G   T H E   T H A N H   D A T
-*/
