@@ -147,9 +147,9 @@
 1. [1737 - Range Queries and Copies](1737%20-%20Range%20Queries%20and%20Copies.cpp) [persistent-segment-tree]
 
 ## Tree Algorithms
-1. [1674 - Subordinates](1674%20-%20Subordinates.cpp) [dfs]
-1. [1130 - Tree Matching](1130%20-%20Tree%20Matching.cpp) [dfs]
-1. [1131 - Tree Diameter](1131%20-%20Tree%20Diameter.cpp)
+1. [1674 - Subordinates](1674%20-%20Subordinates.cpp) 
+1. [1130 - Tree Matching](1130%20-%20Tree%20Matching.cpp) 
+1. [1131 - Tree Diameter](1131%20-%20Tree%20Diameter.cpp) 
 1. [1132 - Tree Distances I](1132%20-%20Tree%20Distances%20I.cpp)
 1. [1133 - Tree Distances II](1133%20-%20Tree%20Distances%20II.cpp)
 1. [1687 - Company Queries I](1687%20-%20Company%20Queries%20I.cpp)
