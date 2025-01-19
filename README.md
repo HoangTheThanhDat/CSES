@@ -152,7 +152,7 @@
 1. [1131 - Tree Diameter](1131%20-%20Tree%20Diameter.cpp) 
 1. [1132 - Tree Distances I](1132%20-%20Tree%20Distances%20I.cpp) [reroot]
 1. [1133 - Tree Distances II](1133%20-%20Tree%20Distances%20II.cpp) [reroot]
-1. [1687 - Company Queries I](1687%20-%20Company%20Queries%20I.cpp)
+1. [1687 - Company Queries I](1687%20-%20Company%20Queries%20I.cpp) [binary-lifting]
 1. [1688 - Company Queries II](1688%20-%20Company%20Queries%20II.cpp)
 1. [1135 - Distance Queries](1135%20-%20Distance%20Queries.cpp)
 1. [1136 - Counting Paths](1136%20-%20Counting%20Paths.cpp)
