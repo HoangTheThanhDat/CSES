@@ -154,7 +154,7 @@
 1. [1133 - Tree Distances II](1133%20-%20Tree%20Distances%20II.cpp) [reroot]
 1. [1687 - Company Queries I](1687%20-%20Company%20Queries%20I.cpp) [binary-lifting]
 1. [1688 - Company Queries II](1688%20-%20Company%20Queries%20II.cpp) [lca]
-1. [1135 - Distance Queries](1135%20-%20Distance%20Queries.cpp)
+1. [1135 - Distance Queries](1135%20-%20Distance%20Queries.cpp) [lca]
 1. [1136 - Counting Paths](1136%20-%20Counting%20Paths.cpp)
 1. [1137 - Subtree Queries](1137%20-%20Subtree%20Queries.cpp)
 1. [1138 - Path Queries](1138%20-%20Path%20Queries.cpp)
